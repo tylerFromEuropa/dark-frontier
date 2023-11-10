@@ -1,0 +1,19 @@
+.headerContainer {
+  height: 15vh;
+  width: 100vw;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--yellow);
+}
+.headerContainer h1 {
+  font-size: 4rem;
+  font-weight: bolder;
+  color: var(--black);
+}

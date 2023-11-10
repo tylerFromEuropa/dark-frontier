@@ -1,25 +1,23 @@
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPersonDigging, faToolbox } from "@fortawesome/free-solid-svg-icons";
-
 import "./Reset.css";
 import "./App.css";
+import Profile from "./components/Profile";
+import { useAuth0 } from "@auth0/auth0-react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Start from "./pages/Start";
+import Game from "./pages/Game";
+
+// import Construction from "./components/Construction";
 
 function App() {
+    const { isAuthenticated } = useAuth0();
     return (
         <>
-            <div className="body-wrap">
-                <div className="hazard-background"></div>
-                <div>
-                    <h1>
-                        <FontAwesomeIcon icon={faToolbox} bounce />
-                        !UNDER CONSTRUCTION!
-                        <FontAwesomeIcon icon={faPersonDigging} shake />
-                    </h1>
-                </div>
-
-                <div className="hazard-background"></div>
-            </div>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={isAuthenticated ? <Game /> : <Start />}></Route>
+                </Routes>
+            </BrowserRouter>
         </>
     );
 }

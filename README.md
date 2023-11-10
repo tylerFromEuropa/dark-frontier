@@ -7,8 +7,8 @@ A text-based action adventure game set in space. Create your character, amass we
 A game made by:
 
 -   Tyler A.
+-   Sam D.
 -   Tobias F.
--   Demie M.
 -   Liam W.
 
 ### version

@@ -9,11 +9,12 @@ export default function Header() {
     <div className="headerContainer">
       <h1>DARK FRONTIER</h1>
 
-      <Link
-        to={menuStatus ? `/game` : `/menu`}
+      <div
         onClick={() => setMenuStatus(!menuStatus)}
         className={`menuopen${menuStatus}`}
-      ></Link>
+      >
+        {menuStatus && <Menu />}
+      </div>
     </div>
   );
 }

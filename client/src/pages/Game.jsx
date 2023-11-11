@@ -3,8 +3,8 @@ import LogoutButton from "../components/LogoutButton";
 
 export default function Game() {
   return (
-    <>
-      <LogoutButton />
-    </>
+    <div id="gamecontainer">
+      <div>The game goes here</div>
+    </div>
   );
 }

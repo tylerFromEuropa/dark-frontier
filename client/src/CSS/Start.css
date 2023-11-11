@@ -19,7 +19,7 @@ body {
   height: 100%;
 }
 .bodyOverlay {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   left: 0;
   top: 0;
@@ -50,7 +50,8 @@ body {
   font-family: "Chakra Petch", sans-serif;
   font-weight: bold;
 
-  box-shadow: 0px 0px 5px var(--red), 0px 0px 15px var(--red), 0px 0px 25px var(--red), 0px 0px 50px var(--red), 0px 0px 150px var(--red);
+  box-shadow: 0px 0px 5px var(--red), 0px 0px 15px var(--red),
+    0px 0px 25px var(--red), 0px 0px 50px var(--red), 0px 0px 150px var(--red);
 
   animation: pulse 2.5s infinite;
 
@@ -59,7 +60,9 @@ body {
 .loginButton:hover {
   border: 1px solid var(--yellow);
 
-  box-shadow: 0px 0px 5px var(--yellow), 0px 0px 15px var(--yellow), 0px 0px 25px var(--yellow), 0px 0px 50px var(--yellow), 0px 0px 150px var(--yellow);
+  box-shadow: 0px 0px 5px var(--yellow), 0px 0px 15px var(--yellow),
+    0px 0px 25px var(--yellow), 0px 0px 50px var(--yellow),
+    0px 0px 150px var(--yellow);
 }
 
 /* Animations */

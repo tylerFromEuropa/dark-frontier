@@ -1,0 +1,11 @@
+#menucontainer {
+  background-color: black;
+  color: #ffe207;
+  grid-area: main;
+  text-align: right;
+}
+
+#menucontainer a {
+  text-decoration: none;
+  color: var(--yellow);
+}

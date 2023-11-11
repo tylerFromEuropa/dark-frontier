@@ -1,5 +1,4 @@
 body {
-  background-image: none;
   background-color: #ffcc00;
   color: #191400;
   font-size: 3rem;
@@ -20,5 +19,11 @@ body {
   width: 100%;
   color: white;
   padding: 5px;
-  background-image: repeating-linear-gradient(-55deg, #000, #000 20px, #ffcc00 20px, #ffcc00 40px);
+  background-image: repeating-linear-gradient(
+    -55deg,
+    #000,
+    #000 20px,
+    #ffcc00 20px,
+    #ffcc00 40px
+  );
 }

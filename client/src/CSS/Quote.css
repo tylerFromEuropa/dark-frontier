@@ -1,0 +1,8 @@
+#quote {
+  color: var(--black);
+  background-color: var(--yellow);
+  padding: 1rem 3rem;
+  position: sticky;
+  top: 50%;
+  text-align: center;
+}

@@ -12,23 +12,21 @@ import Construction from "./components/Construction";
 import Start from "./pages/Start";
 
 function App() {
-    const { isAuthenticated } = useAuth0();
-    return (
-        <>
-            {/* <Header /> */}
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/menu" element={<Menu />}></Route>
-                    <Route path="/" element={<Start />}></Route>
-                    <Route
-                        path="/game"
-                        // element={isAuthenticated ? <Game /> : <Start />}
-                        element={<Game />}
-                    ></Route>
-                </Routes>
-            </BrowserRouter>
-        </>
-    );
+  const { isAuthenticated } = useAuth0();
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Construction />}></Route>
+          <Route
+            path="/game"
+            // element={isAuthenticated ? <Game /> : <Start />}
+            element={<Game />}
+          ></Route>
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
 
 export default App;

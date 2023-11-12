@@ -1,10 +1,24 @@
+import { useState } from "react";
 import "../CSS/Game.css";
-import LogoutButton from "../components/LogoutButton";
+import Header from "../components/Header";
+import Characterselection from "../components/Characterselection";
 
 export default function Game() {
+  const [currentStep, setCurrentStep] = useState(0);
+  const [character, setCharacter] = useState(0);
   return (
-    <div id="gamecontainer">
-      <div>The game goes here</div>
-    </div>
+    <>
+      <Header />
+      <div id="gamecontainer">
+        {currentStep === 0 && (
+          <Characterselection
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+            character={character}
+            setCharacter={setCharacter}
+          />
+        )}
+      </div>
+    </>
   );
 }

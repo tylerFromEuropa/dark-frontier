@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "../CSS/Header.css";
 import Menu from "./Menu";
+import characters from "../assets/characters.json";
 
-export default function Header({ character, characters }) {
+export default function Header({ character }) {
   const [menuStatus, setMenuStatus] = useState(false);
   return (
     <div className="headerContainer">

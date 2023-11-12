@@ -1,7 +1,7 @@
 [
   {
     "name": "???",
-    "img": "../src/assets/questionmark.svg",
+    "img": "/src/assets/questionmark.svg",
     "backstory": "???",
     "dex": 5,
     "str": 5,
@@ -11,7 +11,7 @@
   },
   {
     "name": "Zarnok",
-    "img": "../src/assets/1_zarnok.webp",
+    "img": "/src/assets/1_zarnok.webp",
     "backstory": "As you can tell by his totally normal facial expressions, Zarnok is just a normal dude doing normal space-stuff. He is not at all an unhinged maniac, manically searching for violence, sex and general debauchery.",
     "dex": 5,
     "str": 5,
@@ -21,7 +21,7 @@
   },
   {
     "name": "Xylophus",
-    "img": "../src/assets/2_xylophus.webp",
+    "img": "/src/assets/2_xylophus.webp",
     "backstory": "bla2",
     "dex": 1,
     "str": 9,
@@ -31,7 +31,7 @@
   },
   {
     "name": "Quasarax",
-    "img": "../src/assets/3_quasarax.webp",
+    "img": "/src/assets/3_quasarax.webp",
     "backstory": "bla3",
     "dex": 9,
     "str": 1,

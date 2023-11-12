@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&display=swap");
+
 #root {
   display: grid;
   grid-template-areas:
     "header"
     "main";
   grid-template-rows: 15vh 85vh;
+  font-family: "Chakra Petch", sans-serif;
 }

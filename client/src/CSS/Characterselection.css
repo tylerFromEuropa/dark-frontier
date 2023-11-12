@@ -25,7 +25,6 @@ h2 {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  max-width: 100vw;
   align-content: center;
   justify-content: center;
   align-items: center;
@@ -42,13 +41,18 @@ h2 {
   width: 20vw;
   max-height: 85%;
   margin: 0px 20px;
+  transition: transform 0.5s ease-in-out;
+}
+.character:hover {
+  transform: scale(1.3);
+  cursor: crosshair;
 }
 .character img {
   border: 10px solid var(--black);
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   background-color: var(--yellow);
-  transition: transform 0.1s ease-in-out;
+
   transition: background-color 0.5s ease-out;
   width: 20vw;
   height: 30vw;
@@ -58,7 +62,6 @@ h2 {
 
 .character img:active {
   background-color: var(--green);
-  transform: translateY(10px);
   transform: scale(1.1);
 }
 
@@ -72,11 +75,4 @@ h2 {
   font-size: 1.5rem;
   width: 20vw;
   max-width: 33vh;
-}
-
-.character:hover {
-  border-radius: 20px;
-  margin: 0px 50px;
-  transform: scale(1.1);
-  cursor: crosshair;
 }

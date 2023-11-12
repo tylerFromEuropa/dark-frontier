@@ -1,17 +1,24 @@
 import { useState } from "react";
 import "../CSS/Header.css";
 import Menu from "./Menu";
-import { Link } from "react-router-dom";
 
-export default function Header() {
-    const [menuStatus, setMenuStatus] = useState(false);
-    return (
-        <div className="headerContainer">
-            <h1>DARK FRONTIER</h1>
+export default function Header({ character, characters }) {
+  const [menuStatus, setMenuStatus] = useState(false);
+  return (
+    <div className="headerContainer">
+      <h1>DARK FRONTIER</h1>
+      <img
+        id="headerchararacter"
+        src={`${characters[character].img}`}
+        alt="this is you"
+      />
 
-            <div onClick={() => setMenuStatus(!menuStatus)} className={`menuopen${menuStatus}`}>
-                {menuStatus && <Menu />}
-            </div>
-        </div>
-    );
+      <div
+        onClick={() => setMenuStatus(!menuStatus)}
+        className={`menuopen${menuStatus}`}
+      >
+        {menuStatus && <Menu />}
+      </div>
+    </div>
+  );
 }

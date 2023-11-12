@@ -12,8 +12,11 @@ export default function Characterselection({ setCurrentStep, setCharacter }) {
           <img
             src={zarnok}
             alt="zarnok"
+            onMouseEnter={() => {
+              setCharacter(1);
+            }}
             onClick={() => {
-              setCharacter(0), setCurrentStep(1);
+              setCharacter(1), setCurrentStep(1);
             }}
           />
           <h3>Zarnok</h3>
@@ -22,8 +25,11 @@ export default function Characterselection({ setCurrentStep, setCharacter }) {
           <img
             src={xylophus}
             alt="xylophus"
+            onMouseEnter={() => {
+              setCharacter(2);
+            }}
             onClick={() => {
-              setCharacter(1), setCurrentStep(1);
+              setCharacter(2), setCurrentStep(1);
             }}
           />{" "}
           <h3>Xylophus</h3>
@@ -32,8 +38,11 @@ export default function Characterselection({ setCurrentStep, setCharacter }) {
           <img
             src={quasarax}
             alt="quasarax"
+            onMouseEnter={() => {
+              setCharacter(3);
+            }}
             onClick={() => {
-              setCharacter(2), setCurrentStep(1);
+              setCharacter(3), setCurrentStep(1);
             }}
           />{" "}
           <h3>Quasarax</h3>

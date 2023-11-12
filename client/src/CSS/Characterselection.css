@@ -62,7 +62,6 @@ h2 {
 
 .character img:active {
   background-color: var(--green);
-  transform: scale(1.1);
 }
 
 .character h3 {

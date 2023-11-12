@@ -16,6 +16,12 @@
   padding: 0 0 0 1rem;
 }
 
+#headerchararacter {
+  height: 80%;
+  border: 5px solid var(--black);
+  border-radius: 15px;
+}
+
 .menuopenfalse,
 .menuopentrue {
   height: 3rem;

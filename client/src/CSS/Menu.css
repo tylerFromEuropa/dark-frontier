@@ -1,15 +1,15 @@
 #menucontainer {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #ffe207;
-  text-align: right;
-  width: 100%;
-  height: 85vh;
-  position: absolute;
-  top: 15vh;
-  left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #ffe207;
+    text-align: right;
+    width: 100%;
+    height: 85vh;
+    position: absolute;
+    top: 15vh;
+    left: 0;
 }
 
 #menucontainer a {
-  text-decoration: none;
-  color: var(--yellow);
+    text-decoration: none;
+    color: var(--yellow);
 }

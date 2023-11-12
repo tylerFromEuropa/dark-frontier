@@ -10,7 +10,7 @@
   background-color: var(--yellow);
 }
 .headerContainer h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bolder;
   color: var(--black);
   padding: 0 0 0 1rem;
@@ -18,8 +18,8 @@
 
 .menuopenfalse,
 .menuopentrue {
-  height: 64px;
-  width: 64px;
+  height: 3rem;
+  width: 3rem;
   margin: 0 1rem 0 0;
   background-repeat: no-repeat;
 }

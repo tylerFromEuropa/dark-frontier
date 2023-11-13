@@ -3,8 +3,6 @@ import "../../CSS/BossOne.css";
 import characters from "../../JSON/characters.json";
 
 export default function BossOne({ myCharacter }) {
-  const [userStats, setUserStats] = useState();
-
   return (
     <>
       <div className="userOptionsContainer turnTrue">
@@ -12,7 +10,7 @@ export default function BossOne({ myCharacter }) {
         <button className="userOption">TALK YOUR WAY OUT</button>
       </div>
       <div className="userSide">
-        <img src={`${characters[myCharacter].img}`} alt="this will be your character" />
+        <img src={`${characters[myCharacter].img}`} alt="this is your character" />
       </div>
       <div className="textContainer">
         <h1>HELLO WORLD</h1>

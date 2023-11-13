@@ -11,15 +11,27 @@ export default function Game() {
   const [currentStep, setCurrentStep] = useState(0);
   const [myCharacter, setCharacter] = useState(0);
 
+  const [myUser, setMyUser] = useState({
+    userID: "",
+    character: {},
+  });
+
   return (
     <>
       <Header characters={characters} myCharacter={myCharacter} />
       <div id="gamecontainer">
         {currentStep === 0 && (
-          <Characterselection currentStep={currentStep} setCurrentStep={setCurrentStep} myCharacter={myCharacter} setCharacter={setCharacter} />
+          <Characterselection
+            myUser={myUser}
+            setMyUser={setMyUser}
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+            myCharacter={myCharacter}
+            setCharacter={setCharacter}
+          />
         )}
       </div>
-      {currentStep === 1 && <BossOne myCharacter={myCharacter} />}
+      {currentStep === 1 && <BossOne myUser={myUser} setMyUser={setMyUser} myCharacter={myCharacter} />}
     </>
   );
 }

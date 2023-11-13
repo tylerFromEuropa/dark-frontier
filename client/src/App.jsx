@@ -17,9 +17,9 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Construction />}></Route>
+          {/* <Route path="/" element={<Construction />}></Route> */}
           <Route
-            path="/game"
+            path="/"
             element={isAuthenticated ? <Game /> : <Start />}
             // element={<Game />}
           ></Route>

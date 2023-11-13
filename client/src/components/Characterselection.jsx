@@ -8,13 +8,8 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Characters from "../JSON/characters.json";
 import axios from "axios";
 
-export default function Characterselection({ myCharacter, setCurrentStep, setCharacter }) {
+export default function Characterselection({ myUser, setMyUser, myCharacter, setCurrentStep, setCharacter }) {
   const { user } = useAuth0();
-
-  const [myUser, setMyUser] = useState({
-    userID: "",
-    character: {},
-  });
 
   async function createUser() {
     const newUser = { userID: user.email, character: Characters[myCharacter] };

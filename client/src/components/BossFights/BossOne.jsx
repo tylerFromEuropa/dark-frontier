@@ -15,12 +15,17 @@ export default function BossOne({ myCharacter, myUser, setMyUser }) {
 
   async function updateUser() {
     const API = `https://dark-frontier.onrender.com/users/${myUser.userID}`;
-    await axios.put(API, myUser);
+    try {
+      await axios.put(API, myUser);
+    } catch (error) {
+      console.error("Error updating user:", error);
+    }
   }
 
   function handleFight(choice) {
     setIsTurn(!isTurn);
     if (choice === "attack") {
+      console.log(myUser);
       const attackValue = Math.floor(Math.random() * myUser.character.str) + 1;
       const newBossHealth = bossOne.health - attackValue;
       setBossOne({

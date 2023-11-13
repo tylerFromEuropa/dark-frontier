@@ -14,6 +14,7 @@ export default function Game() {
   const [userData, setUserData] = useState([]);
 
   const [myUser, setMyUser] = useState({
+    myID: "",
     userID: "",
     character: {},
   });

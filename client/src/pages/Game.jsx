@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../CSS/Game.css";
 import Header from "../components/Header";
 import Characterselection from "../components/Characterselection";
@@ -11,11 +11,14 @@ export default function Game() {
   const [currentStep, setCurrentStep] = useState(0);
   const [character, setCharacter] = useState(0);
 
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState({
+    userID: "",
+    character: {},
+  });
 
-  async function createUser() {
+  async function handleUser() {
     const API = `https://dark-frontier.onrender.com/users`;
-    const res = await axios.post(API);
+    const res = await axios.post(API, user);
   }
 
   return (
@@ -23,7 +26,15 @@ export default function Game() {
       <Header characters={characters} character={character} />
       <div id="gamecontainer">
         {currentStep === 0 && (
-          <Characterselection user={user} setUser={setUser} currentStep={currentStep} setCurrentStep={setCurrentStep} setCharacter={setCharacter} />
+          <Characterselection
+            user={user}
+            setUser={setUser}
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+            character={character}
+            setCharacter={setCharacter}
+            handleUser={handleUser}
+          />
         )}
       </div>
       {currentStep === 1 && <BossOne character={character} />}

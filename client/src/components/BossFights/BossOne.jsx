@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../../CSS/BossOne.css";
 import characters from "../../JSON/characters.json";
+import axios from "axios";
 
 export default function BossOne({ myCharacter, myUser, setMyUser }) {
   const [isTurn, setIsTurn] = useState(true);
@@ -12,9 +13,10 @@ export default function BossOne({ myCharacter, myUser, setMyUser }) {
     img_URL: "",
   });
 
-  const [userData, setUserData] = useState({});
-
-  const [userChoice, setUserChoice] = useState();
+  async function updateUser() {
+    const API = `https://dark-frontier.onrender.com/users/${myUser.userID}`;
+    await axios.put(API, myUser);
+  }
 
   function handleFight(choice) {
     setIsTurn(!isTurn);
@@ -39,15 +41,8 @@ export default function BossOne({ myCharacter, myUser, setMyUser }) {
       }
 
       setMyUser({ ...myUser, health: myUser.character.health - damageEffect });
-      setUserHealth();
-
-      console.log(myUser);
+      updateUser();
     }
-  }
-
-  async function setUserHealth() {
-    const API = `https://dark-frontier.onrender.com/users/id:${myUser._id}`;
-    await axios.put(API, myUser);
   }
   return (
     <>

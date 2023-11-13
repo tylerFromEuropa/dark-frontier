@@ -14,7 +14,6 @@ export default function Game() {
   const [userData, setUserData] = useState([]);
 
   const [myUser, setMyUser] = useState({
-    _id: "",
     userID: "",
     character: {},
   });
@@ -28,7 +27,6 @@ export default function Game() {
     const res = await axios.get(API);
     setUserData(res.data);
   }
-  console.log(userData);
 
   return (
     <>
@@ -42,12 +40,11 @@ export default function Game() {
             setCurrentStep={setCurrentStep}
             myCharacter={myCharacter}
             setCharacter={setCharacter}
+            userData={userData}
           />
         )}
       </div>
-      {currentStep === 1 && (
-        <BossOne myUser={myUser} setMyUser={setMyUser} myCharacter={myCharacter} />
-      )}
+      {currentStep === 1 && <BossOne myUser={myUser} setMyUser={setMyUser} myCharacter={myCharacter} />}
     </>
   );
 }

@@ -1,6 +1,6 @@
-import zarnok from "../assets/1_zarnok.webp";
-import xylophus from "../assets/2_xylophus.webp";
-import quasarax from "../assets/3_quasarax.webp";
+import zarnok from "../../public/1_zarnok.webp";
+import xylophus from "../../public/2_xylophus.webp";
+import quasarax from "../../public/3_quasarax.webp";
 import "../CSS/Characterselection.css";
 
 export default function Characterselection({ setCurrentStep, setCharacter }) {

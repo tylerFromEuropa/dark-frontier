@@ -1,10 +1,19 @@
+import { useState } from "react";
 import zarnok from "../../public/1_zarnok.webp";
 import xylophus from "../../public/2_xylophus.webp";
 import quasarax from "../../public/3_quasarax.webp";
 import "../CSS/Characterselection.css";
 import { useAuth0 } from "@auth0/auth0-react";
 
-export default function Characterselection({ setUser, user, setCurrentStep, setCharacter }) {
+import Characters from "../JSON/characters.json";
+
+export default function Characterselection({ handleUser, character, user, setUser, setCurrentStep, setCharacter }) {
+  const setUserID = useAuth0().user.email;
+
+  function createUser() {
+    setUser({ ...user, userID: setUserID, character: Characters[character] });
+    handleUser();
+  }
   return (
     <div id="charselectcontainer">
       <h2>Select your adventurer</h2>
@@ -17,7 +26,7 @@ export default function Characterselection({ setUser, user, setCurrentStep, setC
               setCharacter(1);
             }}
             onClick={() => {
-              setCharacter(1), setCurrentStep(1);
+              setCharacter(1), setCurrentStep(1), createUser();
             }}
           />
           <h3>Zarnok</h3>

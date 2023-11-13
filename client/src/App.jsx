@@ -20,8 +20,8 @@ function App() {
           <Route path="/" element={<Construction />}></Route>
           <Route
             path="/game"
-            // element={isAuthenticated ? <Game /> : <Start />}
-            element={<Game />}
+            element={isAuthenticated ? <Game /> : <Start />}
+            // element={<Game />}
           ></Route>
         </Routes>
       </BrowserRouter>

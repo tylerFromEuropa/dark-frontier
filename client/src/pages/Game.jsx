@@ -9,35 +9,17 @@ import axios from "axios";
 
 export default function Game() {
   const [currentStep, setCurrentStep] = useState(0);
-  const [character, setCharacter] = useState(0);
-
-  const [user, setUser] = useState({
-    userID: "",
-    character: {},
-  });
-
-  async function handleUser() {
-    const API = `https://dark-frontier.onrender.com/users`;
-    const res = await axios.post(API, user);
-  }
+  const [myCharacter, setCharacter] = useState(0);
 
   return (
     <>
-      <Header characters={characters} character={character} />
+      <Header characters={characters} myCharacter={myCharacter} />
       <div id="gamecontainer">
         {currentStep === 0 && (
-          <Characterselection
-            user={user}
-            setUser={setUser}
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            character={character}
-            setCharacter={setCharacter}
-            handleUser={handleUser}
-          />
+          <Characterselection currentStep={currentStep} setCurrentStep={setCurrentStep} myCharacter={myCharacter} setCharacter={setCharacter} />
         )}
       </div>
-      {currentStep === 1 && <BossOne character={character} />}
+      {currentStep === 1 && <BossOne myCharacter={myCharacter} />}
     </>
   );
 }

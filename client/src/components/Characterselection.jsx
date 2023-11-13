@@ -6,14 +6,23 @@ import "../CSS/Characterselection.css";
 import { useAuth0 } from "@auth0/auth0-react";
 
 import Characters from "../JSON/characters.json";
+import axios from "axios";
 
-export default function Characterselection({ handleUser, character, user, setUser, setCurrentStep, setCharacter }) {
-  const setUserID = useAuth0().user.email;
+export default function Characterselection({ myCharacter, setCurrentStep, setCharacter }) {
+  const { user } = useAuth0();
 
-  function createUser() {
-    setUser({ ...user, userID: setUserID, character: Characters[character] });
-    handleUser();
+  const [myUser, setMyUser] = useState({
+    userID: "",
+    character: {},
+  });
+
+  async function createUser() {
+    const newUser = { userID: user.email, character: Characters[myCharacter] };
+    setMyUser(newUser);
+    const API = "https://dark-frontier.onrender.com/users";
+    await axios.post(API, newUser);
   }
+
   return (
     <div id="charselectcontainer">
       <h2>Select your adventurer</h2>

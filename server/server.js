@@ -32,6 +32,8 @@ app.post("/users", async (request, response) => {
 });
 
 app.put("/users/:id", async (request, response) => {
+  // We use the function findOneAndUpdate which makes the myID = whatever param we used (which is the big number) and sets it as the request body to then update the database
+  // The { new: true } part simply uses the new data instead of the old data
   const updatedUser = await Users.findOneAndUpdate({ myID: request.params.id }, request.body, { new: true });
   response.json(updatedUser);
 });

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../../CSS/BossOne.css";
 import characters from "../../JSON/characters.json";
 import axios from "axios";
@@ -22,6 +22,11 @@ export default function BossOne({ myCharacter, myUser, setMyUser }) {
     }
   }
 
+  // We are doing useEffect whenever the myUser state variable is changed which then runs and updates it to the database on MongoDB in the updateUser() function
+  useEffect(() => {
+    updateUser();
+  }, [myUser]);
+
   function handleFight(choice) {
     setIsTurn(!isTurn);
     if (choice === "attack") {
@@ -39,14 +44,24 @@ export default function BossOne({ myCharacter, myUser, setMyUser }) {
       }
     } else if (choice === "dodge") {
       const bossAttackValue = Math.floor(Math.random() * bossOne.attack) + 1;
-      const dodgeEffect = Math.floor(Math.random() * myUser.character.dex) + 1;
-      let damageEffect = bossAttackValue - dodgeEffect;
-      if (damageEffect <= 0) {
-        damageEffect = 0;
-      }
+      const dodgeEffect = Math.random() * myUser.character.dex;
+      const dodgeChance = dodgeEffect / 10;
+      let damageEffect = Math.floor(bossAttackValue * (1 - dodgeChance));
 
-      setMyUser({ ...myUser, health: myUser.character.health - damageEffect });
-      updateUser();
+      // Spreads the myUser object (which has: {
+      // myID: value,
+      // userID: value,
+      // character: object,
+      // })
+      // We then want to get the health to change which is inside another object (the character pair)
+      // So we have to again spread character to change the health value
+      setMyUser({
+        ...myUser,
+        character: {
+          ...myUser.character,
+          health: myUser.character.health - damageEffect,
+        },
+      });
     }
   }
   return (

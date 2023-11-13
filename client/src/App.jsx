@@ -13,6 +13,8 @@ import Start from "./pages/Start";
 
 function App() {
   const { isAuthenticated } = useAuth0();
+
+  console.log(user);
   return (
     <>
       <BrowserRouter>

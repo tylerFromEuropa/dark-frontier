@@ -32,7 +32,7 @@ app.post("/users", async (request, response) => {
 });
 
 app.put("/users/:id", async (request, response) => {
-  const updatedUser = await Users.findByIdAndUpdate(request.params.id, request.body);
+  const updatedUser = await Users.findOneAndUpdate({ myID: request.params.id }, request.body, { new: true });
   response.json(updatedUser);
 });
 

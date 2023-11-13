@@ -11,9 +11,11 @@ import axios from "axios";
 export default function Characterselection({ myUser, setMyUser, myCharacter, setCurrentStep, setCharacter, userData }) {
   const { user } = useAuth0();
 
+  // This creates a very big random number
   const ranNum = Math.floor(Math.random() * 100000000000);
 
   async function createUser() {
+    // We use said big number in the myID part so that each user has a unique id and we can access their data with it over at server.js
     const newUser = { myID: ranNum, userID: user.email, character: Characters[myCharacter] };
     setMyUser(newUser);
     const API = "https://dark-frontier.onrender.com/users";

@@ -13,6 +13,8 @@ export default function Game() {
 
   const [userData, setUserData] = useState([]);
 
+  // This needs to take a unique id (myID) which is set on CharacterSelection, between a very big number
+  // We use myID as we need something to access the specific object inside of our database when doing updates
   const [myUser, setMyUser] = useState({
     myID: "",
     userID: "",

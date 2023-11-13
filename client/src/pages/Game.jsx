@@ -11,10 +11,24 @@ export default function Game() {
   const [currentStep, setCurrentStep] = useState(0);
   const [myCharacter, setCharacter] = useState(0);
 
+  const [userData, setUserData] = useState([]);
+
   const [myUser, setMyUser] = useState({
+    _id: "",
     userID: "",
     character: {},
   });
+
+  useEffect(() => {
+    getUsers();
+  }, []);
+
+  async function getUsers() {
+    const API = "https://dark-frontier.onrender.com/users";
+    const res = await axios.get(API);
+    setUserData(res.data);
+  }
+  console.log(userData);
 
   return (
     <>
@@ -31,7 +45,9 @@ export default function Game() {
           />
         )}
       </div>
-      {currentStep === 1 && <BossOne myUser={myUser} setMyUser={setMyUser} myCharacter={myCharacter} />}
+      {currentStep === 1 && (
+        <BossOne myUser={myUser} setMyUser={setMyUser} myCharacter={myCharacter} />
+      )}
     </>
   );
 }

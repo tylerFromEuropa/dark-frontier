@@ -2,8 +2,9 @@ import zarnok from "../../public/1_zarnok.webp";
 import xylophus from "../../public/2_xylophus.webp";
 import quasarax from "../../public/3_quasarax.webp";
 import "../CSS/Characterselection.css";
+import { useAuth0 } from "@auth0/auth0-react";
 
-export default function Characterselection({ setCurrentStep, setCharacter }) {
+export default function Characterselection({ setUser, user, setCurrentStep, setCharacter }) {
   return (
     <div id="charselectcontainer">
       <h2>Select your adventurer</h2>

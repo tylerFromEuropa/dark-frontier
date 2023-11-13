@@ -14,7 +14,7 @@ export default function BossOne({ myCharacter, myUser, setMyUser }) {
   });
 
   async function updateUser() {
-    const API = `https://dark-frontier.onrender.com/users/${myUser.userID}`;
+    const API = `https://dark-frontier.onrender.com/users/${myUser.myID}`;
     try {
       await axios.put(API, myUser);
     } catch (error) {

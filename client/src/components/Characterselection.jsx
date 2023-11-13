@@ -11,8 +11,10 @@ import axios from "axios";
 export default function Characterselection({ myUser, setMyUser, myCharacter, setCurrentStep, setCharacter, userData }) {
   const { user } = useAuth0();
 
+  const ranNum = Math.floor(Math.random() * 100000000000);
+
   async function createUser() {
-    const newUser = { userID: user.email, character: Characters[myCharacter] };
+    const newUser = { myID: ranNum, userID: user.email, character: Characters[myCharacter] };
     setMyUser(newUser);
     const API = "https://dark-frontier.onrender.com/users";
     await axios.post(API, newUser);

@@ -2,32 +2,84 @@ import { useEffect, useState } from "react";
 import "./1_Backstory.css";
 import storyline from "./Backstory.json";
 
-export default function $1_Backstory() {
+export default function $1_Backstory({ myUser, setMyUser }) {
   const [storyChoice, setStoryChoice] = useState(0);
+  const [specificChoice, setSpecificChoice] = useState(0);
   const [optionCheck, setOptionCheck] = useState(false);
+  const [storyPath, setStoryPath] = useState("story");
 
-  // Running checkingStory function whenever storyChoice changes
   useEffect(() => {
     checkingStory();
   }, [storyChoice]);
 
   // Checking storychoice and if it is an option we change the optionCheck to true else it stays false
   function checkingStory() {
-    if (storyChoice === 1) {
+    if (storyChoice === 1 && storyPath === "story") {
       setOptionCheck(true);
+      setSpecificChoice(1);
+    } else if (storyChoice === 3 && storyPath === "waterPathTrue") {
+      setOptionCheck(true);
+      setSpecificChoice(2);
+    } else if (storyChoice === 6 && storyPath === "waterPathFalse") {
+      setOptionCheck(true);
+      setSpecificChoice(3);
     } else {
       setOptionCheck(false);
+      setSpecificChoice(0);
     }
-    console.log(optionCheck, storyChoice);
   }
 
-  // One of our options
-  function findWater() {
+  function everyPath(optionNum) {
+    const pathArray = {
+      gotWater: false,
+      guardExplain: false,
+      guardFingerGuns: false,
+      guardYell: false,
+      doctorQuestion: false,
+      doctorPanic: false,
+    };
+
     const randomNumber = Math.random();
     if (randomNumber <= 0.5) {
-      setStoryChoice(3);
+      pathArray.gotWater = false;
     } else {
-      setStoryChoice(2);
+      pathArray.gotWater = true;
+    }
+    if (pathArray.gotWater === true && storyPath === "story") {
+      setStoryChoice(0);
+      setStoryPath("waterPathTrue");
+    } else if (pathArray.gotWater === false && storyPath === "story") {
+      setStoryChoice(0);
+      setStoryPath("waterPathFalse");
+    }
+
+    if (specificChoice === 2) {
+      if (optionNum === 1) {
+        pathArray.guardExplain = true;
+        setStoryChoice(0);
+        setStoryPath("guardExplain");
+      } else if (optionNum === 2) {
+        pathArray.guardFingerGuns = true;
+        setStoryChoice(0);
+        setStoryPath("guardFingerGuns");
+      } else if (optionNum === 3) {
+        pathArray.guardYell = true;
+        setStoryChoice(0);
+        setStoryPath("guardYell");
+      }
+    }
+
+    if (specificChoice === 3) {
+      if (optionNum === 1) {
+        pathArray.doctorQuestion = true;
+        setStoryChoice(storyChoice + 1);
+        setStoryChoice(0);
+        setStoryPath("doctorQuestion");
+      } else if (optionNum === 2) {
+        pathArray.doctorPanic = true;
+        setStoryChoice(0);
+        setStoryPath("doctorPanic");
+      }
     }
   }
 
@@ -35,27 +87,77 @@ export default function $1_Backstory() {
     <section className="backstory-page">
       <section className="background">
         <img src="" alt="" />
-        <p>{storyline[storyChoice]}</p>
+        <p>{storyline[0][storyPath][storyChoice]}</p>
       </section>
       <section className="selections">
-        {/* Checks if the option variable is false and shows the continue button */}
         {!optionCheck && (
           <div>
             <button
               onClick={() => {
                 setStoryChoice(storyChoice + 1);
-                if (storyChoice === 2) {
-                  setStoryChoice(storyChoice + 2);
-                }
               }}
             >
               Continue
             </button>
           </div>
         )}
-        {/* Checks if the option variable is true and shows these buttons */}
         {optionCheck && (
-          <div className="asdgnjhasgas">{storyChoice === 1 && <button onClick={findWater}>Look around the lifepod ship for some water</button>}</div>
+          <div>
+            {specificChoice === 1 && (
+              <button
+                onClick={() => {
+                  everyPath(1);
+                }}
+              >
+                Find Some Water
+              </button>
+            )}
+
+            {specificChoice === 2 && (
+              <div>
+                <button
+                  onClick={() => {
+                    everyPath(1);
+                  }}
+                >
+                  Explain Using Sound Effects
+                </button>
+                <button
+                  onClick={() => {
+                    everyPath(2);
+                  }}
+                >
+                  Explain With Finger Guns
+                </button>
+                <button
+                  onClick={() => {
+                    everyPath(3);
+                  }}
+                >
+                  Yell at them!
+                </button>
+              </div>
+            )}
+
+            {specificChoice === 3 && (
+              <div>
+                <button
+                  onClick={() => {
+                    everyPath(1);
+                  }}
+                >
+                  Question Doctor
+                </button>
+                <button
+                  onClick={() => {
+                    everyPath(2);
+                  }}
+                >
+                  Stand Up & Remove Attached Devices
+                </button>
+              </div>
+            )}
+          </div>
         )}
       </section>
     </section>

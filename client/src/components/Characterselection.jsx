@@ -8,14 +8,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Characters from "../JSON/characters.json";
 import axios from "axios";
 
-export default function Characterselection({
-  myUser,
-  setMyUser,
-  myCharacter,
-  setCurrentStep,
-  setCharacter,
-  userData,
-}) {
+export default function Characterselection({ myUser, setMyUser, myCharacter, setCurrentStep, setCharacter, userData }) {
   const { user } = useAuth0();
 
   // This creates a very big random number
@@ -30,8 +23,13 @@ export default function Characterselection({
       character: Characters[myCharacter],
     };
     setMyUser(newUser);
-    const API = "https://dark-frontier.onrender.com/users";
-    await axios.post(API, newUser);
+    if (userData.userID === user.email) {
+      const API = `https://dark-frontier.onrender.com/users/${userData.myID}`;
+      await axios.put(API, newUser);
+    } else {
+      const API = "https://dark-frontier.onrender.com/users";
+      await axios.post(API, newUser);
+    }
   }
 
   return (

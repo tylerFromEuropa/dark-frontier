@@ -1,7 +1,45 @@
 [
-  "You are thirsty...",
-  "Look around the lifepod ship for some water",
-  "You find a flask, unfortunately it is damaged and all the water leaked.",
-  "You find your trusty water flask, you remove the cap and drink like never before, you quench your thirst.",
-  "This is working you can now celebrate"
+  {
+    "story": ["You are thirsty...", "Look around the lifepod ship for some water"],
+    "waterPathTrue": [
+      "You find your trusty water flask, you remove the cap and drink like never before, you quench your thirst.",
+      "You drink from the bottle, you quench your thirst. You feel invigorated. You take a minute to rest and then you begin walking towards the village...",
+      "You approach the village gates, two Nuccunulan guards stand on either side of the door. The guard on the left stops you as you get closer and yells in a language unknown to you...",
+      "Carefully choose your option"
+    ],
+    "waterPathFalse": [
+      "You find a flask, unfortunately it is damaged and all the water leaked.",
+      "You feel parched, a groan comes out as you try and think of the next steps.",
+      "You take some deep breaths and gather your bearings and remember that you survived the crash! This gives you a bit of motivational boost.You start to walk in the direction of the village you spotted earlier.",
+      "After a long trek through the harsh landscape of this region on Nuccunus...",
+      "You approach the village gates, two Nuccunulan guards stand on either side of the door. The guard on the left stops you as you get closer and yells in a language unknown to you...",
+      "You begin to feel dizzy and the world spins around you... You collapse on the ground like a sack of potatoes... You then wake up at the local clinic with an elderly doctor sporting a long white curly mustache grinning at you.",
+      "Carefully choose your option!"
+    ],
+    "guardExplain": [
+      "The guards somehow understood what you meant, and perhaps they heard a boom in the distance... They let you in! On the way in they do drinking motions with their 3rd hands.",
+      "You arrive at the bar, populated with all sorts of creatures and aliens. Some drinking, some fighting... You make your way to the bartender.",
+      "LOAD BAR"
+    ],
+    "guardFingerGuns": [
+      "They see you mimic a criminal and a victim, despite your awful acting attempts, they understand you. They let you in. On the way in they do drinking motions with their 3rd hand.",
+      "You arrive at the bar, populated with all sorts of creatures and aliens. Some drinking, some fighting... You make your way to the bartender.",
+      "LOAD BAR"
+    ],
+    "guardYell": [
+      "They are confused by what you are saying, as they do not speak your tongue. One of the guards take some coins out of his pocket and points to the door. He is saying you need to pay for entry. You lose some coins",
+      "You arrive at the bar, populated with all sorts of creatures and aliens. Some drinking, some fighting... You make your way to the bartender.",
+      "LOAD BAR"
+    ],
+    "doctorQuestion": [
+      "The doctor begins to explain in a tongue you understand that you collapsed of dehydration. He knows about your spaceship crashing and about some pirates that recently came by. He tells you to head to the local bar and ask for “Skyhawk”.",
+      "You arrive at the bar, populated with all sorts of creatures and aliens. Some drinking, some fighting... You make your way to the bartender.",
+      "LOAD BAR"
+    ],
+    "doctorPanic": [
+      "The doctor begins to explain in a tongue you understand that you collapsed of dehydration. He knows about your spaceship crashing and about some pirates that recently came by. He tells you to head to the local bar and ask for “Skyhawk”.",
+      "You arrive at the bar, populated with all sorts of creatures and aliens. Some drinking, some fighting... You make your way to the bartender.",
+      "LOAD BAR"
+    ]
+  }
 ]

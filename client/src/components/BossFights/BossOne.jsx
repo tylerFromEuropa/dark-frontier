@@ -19,6 +19,9 @@ export default function BossOne({
     name: "Captain Celestial Scourge",
     img_URL: "",
   });
+  const [fightDescription, setFightDescription] = useState([
+    "It's bossfight o'clock, mofos!",
+  ]);
 
   async function updateUser() {
     const API = `https://dark-frontier.onrender.com/users/${myUser.myID}`;
@@ -44,11 +47,20 @@ export default function BossOne({
         ...bossOne,
         health: newBossHealth,
       });
+      setFightDescription([
+        ...fightDescription,
+        `You attack and inflict a damage of ${attackValue}!`,
+      ]);
     } else if (choice === "talk") {
       const charismaCheck = bossOne.friendly + myUser.character.cha;
       if (charismaCheck >= 10) {
         // friendly screen - gives you the part
       }
+      setFightDescription([
+        ...fightDescription,
+        `You try to to make the guy your friend my offering to buy him a drink. Success!
+        (boss was friendly = ${bossOne.friendly} and you had a charisma of ${myUser.character.cha})`,
+      ]);
     } else if (choice === "dodge") {
       const bossAttackValue = Math.floor(Math.random() * bossOne.attack) + 1;
       const dodgeEffect = Math.random() * myUser.character.dex;
@@ -69,6 +81,10 @@ export default function BossOne({
           health: myUser.character.health - damageEffect,
         },
       });
+      setFightDescription([
+        ...fightDescription,
+        `You try to dodge the attack, but you still take a hit of ${damageEffect} damage.`,
+      ]);
     } else if (choice === "counter-attack") {
       const bossAttackValue = Math.floor(Math.random() * bossOne.attack) + 1;
       const counterAttackEffect = Math.random() * myUser.character.dex + 1;
@@ -88,6 +104,10 @@ export default function BossOne({
             health: myUser.character.health - bossAttackValue,
           },
         });
+        setFightDescription([
+          ...fightDescription,
+          `The boss attacks! You try to evade and counterattack, and you manage to inflict ${attackValue} to your opponent, but you still take a hit of ${bossAttackValue} damage.  `,
+        ]);
       } else {
         setMyUser({
           ...myUser,
@@ -96,78 +116,95 @@ export default function BossOne({
             health: myUser.character.health - bossAttackValue,
           },
         });
+        setFightDescription([
+          ...fightDescription,
+          `The boss attacks! You try to evade and counterattack, but you have a skill issue and take the full force of the hit... ${bossAttackValue} damage. That hurt! `,
+        ]);
       }
     }
   }
 
   return (
-    <>
-      <p>{`Player health: ${myUser.character.health}, Boss health: ${bossOne.health}`}</p>
-      <div className="userSide">
+    <div id="bossfightcontainer">
+      <div id="leftside">
         <img
-          id="leftplayer"
+          id="leftimage"
           src={`${characters[myCharacter].img}`}
           alt="this is your character"
         />
+        <p>{`${myUser.character.name}`}</p>
+        <p>{`Player health: ${myUser.character.health}`}</p>
       </div>
-      {myUser.character.health > 0 && bossOne.health > 0 && (
-        <div>
-          {isTurn && (
-            <div className="userOptionsContainer">
-              <button
-                className="userOption"
-                onClick={() => {
-                  handleFight("attack");
-                }}
-              >
-                ATTACK
-              </button>
-              <button
-                className="userOption"
-                onClick={() => {
-                  handleFight("talk");
-                }}
-              >
-                TALK YOUR WAY OUT
-              </button>
-            </div>
-          )}
-          {!isTurn && (
-            <div className="userResponseOptionsContainer">
-              <button
-                className="userOption"
-                onClick={() => {
-                  handleFight("dodge");
-                }}
-              >
-                DODGE
-              </button>
-              <button
-                className="userOption"
-                onClick={() => {
-                  handleFight("counter-attack");
-                }}
-              >
-                COUNTER ATTACK
-              </button>
-              <button
-                className="userOption"
-                onClick={() => {
-                  handleFight("talk");
-                }}
-              >
-                TALK YOUR WAY OUT
-              </button>
-            </div>
-          )}
+      <div id="middleleft">
+        <div id="middletextcontainer">
+          {fightDescription.map((action) => (
+            <p className="fightactiondescription">{action}</p>
+          ))}
         </div>
-      )}
+      </div>
+      <div id="middleright">
+        <img id="rightimage" src="boss1.webp" alt="this is boss1" />
+        <p>Sketchy Bartender</p>
+        <p>{`Boss health: ${bossOne.health}`}</p>
+      </div>
+      <div id="rightside">
+        {myUser.character.health > 0 && bossOne.health > 0 && (
+          <>
+            {isTurn && (
+              <>
+                <button
+                  className="useroption"
+                  onClick={() => {
+                    handleFight("attack");
+                  }}
+                >
+                  ATTACK
+                </button>
+                <button
+                  className="useroption"
+                  onClick={() => {
+                    handleFight("talk");
+                  }}
+                >
+                  TALK YOUR WAY OUT
+                </button>
+              </>
+            )}
+            {!isTurn && (
+              <>
+                <button
+                  className="useroption"
+                  onClick={() => {
+                    handleFight("dodge");
+                  }}
+                >
+                  DODGE
+                </button>
+                <button
+                  className="useroption"
+                  onClick={() => {
+                    handleFight("counter-attack");
+                  }}
+                >
+                  COUNTER ATTACK
+                </button>
+                <button
+                  className="useroption"
+                  onClick={() => {
+                    handleFight("talk");
+                  }}
+                >
+                  TALK YOUR WAY OUT
+                </button>
+              </>
+            )}
+          </>
+        )}
+      </div>
 
-      {myUser.character.health < 1 && (
-        <GameOver setMyUser={setMyUser} myUser={myUser} />
-      )}
+      {myUser.character.health < 1 && setCurrentStep(100)}
       {bossOne.health < 1 && setCurrentStep(2)}
       {console.log(currentStep)}
-    </>
+    </div>
   );
 }

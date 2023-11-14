@@ -1,35 +1,48 @@
-.userOptionsContainer {
-  width: 100vw;
-  height: 100vh;
+#bossfightcontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  background-color: #272727de;
+  color: var(--yellow);
+}
+#leftimage,
+#rightimage {
+  max-width: 60%;
+}
 
+#middleleft {
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+
+#middletextcontainer {
+  font-size: 30%;
+  height: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+#rightside {
+  background-color: #121212;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  align-content: center;
   justify-content: center;
   align-items: center;
 }
 
-.userResponseOptionsContainer {
-  width: 100vw;
-  height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.fightactiondescription {
+  margin-bottom: 20px;
 }
 
-.userOption {
-  width: 20vw;
-
-  padding: 8px;
-
-  background-color: var(--black);
-  color: var(--white);
-
-  font-size: 16px;
-}
-
-#leftplayer {
-  max-width: 100px;
-  max-height: 150px;
+.useroption {
+  padding: 20px 50px;
+  background-color: transparent;
+  border: 1px solid var(--yellow);
+  color: var(--yellow);
+  width: 80%;
+  margin-bottom: 20px;
 }

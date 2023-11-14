@@ -7,6 +7,8 @@ export default function $1_Backstory({ myUser, setMyUser }) {
   const [specificChoice, setSpecificChoice] = useState(0);
   const [optionCheck, setOptionCheck] = useState(false);
   const [storyPath, setStoryPath] = useState("story");
+  const [backgroundImageClass, setBackgroundImageClass] =
+    useState("background");
 
   useEffect(() => {
     checkingStory();
@@ -85,7 +87,7 @@ export default function $1_Backstory({ myUser, setMyUser }) {
 
   return (
     <section className="backstory-page">
-      <section className="background">
+      <section className={backgroundImageClass}>
         <img src="" alt="" />
         <p>{storyline[0][storyPath][storyChoice]}</p>
       </section>
@@ -93,8 +95,10 @@ export default function $1_Backstory({ myUser, setMyUser }) {
         {!optionCheck && (
           <div>
             <button
+              className="useroption"
               onClick={() => {
-                setStoryChoice(storyChoice + 1);
+                setStoryChoice(storyChoice + 1),
+                  setBackgroundImageClass("background BGcrashsite");
               }}
             >
               Continue
@@ -105,6 +109,7 @@ export default function $1_Backstory({ myUser, setMyUser }) {
           <div>
             {specificChoice === 1 && (
               <button
+                className="useroption"
                 onClick={() => {
                   everyPath(1);
                 }}
@@ -116,6 +121,7 @@ export default function $1_Backstory({ myUser, setMyUser }) {
             {specificChoice === 2 && (
               <div>
                 <button
+                  className="useroption"
                   onClick={() => {
                     everyPath(1);
                   }}
@@ -123,6 +129,7 @@ export default function $1_Backstory({ myUser, setMyUser }) {
                   Explain Using Sound Effects
                 </button>
                 <button
+                  className="useroption"
                   onClick={() => {
                     everyPath(2);
                   }}
@@ -130,6 +137,7 @@ export default function $1_Backstory({ myUser, setMyUser }) {
                   Explain With Finger Guns
                 </button>
                 <button
+                  className="useroption"
                   onClick={() => {
                     everyPath(3);
                   }}
@@ -142,6 +150,7 @@ export default function $1_Backstory({ myUser, setMyUser }) {
             {specificChoice === 3 && (
               <div>
                 <button
+                  className="useroption"
                   onClick={() => {
                     everyPath(1);
                   }}
@@ -149,6 +158,7 @@ export default function $1_Backstory({ myUser, setMyUser }) {
                   Question Doctor
                 </button>
                 <button
+                  className="useroption"
                   onClick={() => {
                     everyPath(2);
                   }}

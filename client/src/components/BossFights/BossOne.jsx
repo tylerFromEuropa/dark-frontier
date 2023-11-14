@@ -99,7 +99,7 @@ export default function BossOne({ myCharacter, myUser, setMyUser }) {
           <button
             className="userOption"
             onClick={() => {
-              handleFight("attack");
+              handleFight("counter-attack");
             }}
           >
             COUNTER ATTACK
@@ -107,7 +107,7 @@ export default function BossOne({ myCharacter, myUser, setMyUser }) {
           <button
             className="userOption"
             onClick={() => {
-              handleFight("attack");
+              handleFight("talk");
             }}
           >
             TALK YOUR WAY OUT

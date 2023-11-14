@@ -16,6 +16,7 @@ export default function Characterselection({ myUser, setMyUser, myCharacter, set
 
   async function createUser() {
     // We use said big number in the myID part so that each user has a unique id and we can access their data with it over at server.js
+    // Try and use MongoDB automatically generated ID at the end of the week
     const newUser = { myID: ranNum, userID: user.email, character: Characters[myCharacter] };
     setMyUser(newUser);
     const API = "https://dark-frontier.onrender.com/users";

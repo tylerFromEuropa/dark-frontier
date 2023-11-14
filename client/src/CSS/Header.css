@@ -9,16 +9,29 @@
   align-items: center;
   background: none;
   z-index: 10;
+  background-color: var(--black);
+  padding: 10px 0px 10px 10px;
 }
-.headerContainer h1 {
-  font-size: 3rem;
+#headerchararacter {
+  max-height: 10vh;
+  display: flex;
+
+  #headercharacterNameHealth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+#headerchararacter p,
+.health-bar {
+  font-size: 2rem;
   font-weight: bolder;
-  color: var(--black);
+  color: var(--yellow);
   padding: 0 0 0 1rem;
 }
 
-#headerchararacter {
-  height: 80%;
+#headerchararacter img {
+  max-height: 7vh;
   border: 5px solid var(--black);
   border-radius: 15px;
 }
@@ -30,7 +43,7 @@
   margin: 0 1rem 0 0;
   background-repeat: no-repeat;
   padding: 10px;
-  background-color: var(--yellow);
+  background-size: 3rem 3rem;
   border-radius: 10px;
 }
 

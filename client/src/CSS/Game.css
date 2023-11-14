@@ -1,12 +1,12 @@
 body {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 #gamecontainer {
-    grid-area: main;
-    display: grid;
-    justify-items: center;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    height: 100vh;
+  /* grid-area: main; */
+  /* display: grid; */
+  justify-items: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  height: 100vh;
 }

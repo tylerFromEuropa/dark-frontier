@@ -3,12 +3,13 @@ body {
 }
 
 #gamecontainer {
-  grid-area: main;
+  grid-row-start: 1;
+  grid-row-end: 3;
   display: grid;
   justify-items: center;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  height: 90vh;
+  height: 100vh;
   background-image: url(/background_space_2.jpg);
-  background-size: 100% 90vh;
+  background-size: 100% 100%;
 }

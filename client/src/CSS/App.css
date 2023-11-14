@@ -2,9 +2,6 @@
 
 #root {
   display: grid;
-  grid-template-areas:
-    "header"
-    "main";
   grid-template-rows: 10vh 90vh;
   font-family: "Chakra Petch", sans-serif;
 }

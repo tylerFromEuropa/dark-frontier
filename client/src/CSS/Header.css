@@ -1,5 +1,6 @@
 .headerContainer {
-  grid-area: "header";
+  grid-row-start: 1;
+  grid-row-end: 2;
   height: 10vh;
   width: 100%;
   position: absolute;
@@ -10,7 +11,7 @@
   align-items: center;
   background: none;
   z-index: 10;
-  background-color: var(--black);
+
   padding: 10px 0px 10px 10px;
 }
 #headerchararacter {

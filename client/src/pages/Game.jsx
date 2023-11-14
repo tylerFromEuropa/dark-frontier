@@ -6,12 +6,15 @@ import characters from "../JSON/characters.json";
 import BossOne from "../components/BossFights/BossOne";
 import axios from "axios";
 import $1_Backstory from "../components/1_Backstory/1_Backstory";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Game() {
   const [currentStep, setCurrentStep] = useState(0);
   const [myCharacter, setCharacter] = useState(0);
 
-  const [userData, setUserData] = useState([]);
+  const [userData, setUserData] = useState({});
+
+  const { user } = useAuth0();
 
   // This needs to take a unique id (myID) which is set on CharacterSelection, between a very big number
   // We use myID as we need something to access the specific object inside of our database when doing updates
@@ -26,9 +29,9 @@ export default function Game() {
   }, []);
 
   async function getUsers() {
-    const API = "https://dark-frontier.onrender.com/users";
+    const API = `https://dark-frontier.onrender.com/users?userID=${user.email}`;
     const res = await axios.get(API);
-    setUserData(res.data);
+    setUserData(res.data[0]);
   }
 
   return (

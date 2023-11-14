@@ -1,8 +1,12 @@
-#gamecontainer {
-  grid-area: main;
+body {
+    overflow: hidden;
 }
 
 #gamecontainer {
-  display: grid;
-  justify-items: center;
+    grid-area: main;
+    display: grid;
+    justify-items: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    height: 100vh;
 }

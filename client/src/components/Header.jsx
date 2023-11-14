@@ -15,15 +15,18 @@ export default function Header({ myCharacter, myUser, setMyUser }) {
   return (
     <div className="headerContainer">
       {myUser.myID !== "" && (
-        <section>
-          <img src="" alt="" />
-          <div>
-            <h2>{myUser.character.name}</h2>
+        <div id="headerchararacter">
+          <img src={myUser.character.img} alt="this is you" />
+          <div id="headercharacterNameHealth">
+            <p>{myUser.character.name}</p>
             <div className="health-bar">{healthDivs}</div>
           </div>
-        </section>
+        </div>
       )}
-      <div onClick={() => setMenuStatus(!menuStatus)} className={`menuopen${menuStatus}`}>
+      <div
+        onClick={() => setMenuStatus(!menuStatus)}
+        className={`menuopen${menuStatus}`}
+      >
         {menuStatus && <Menu />}
       </div>
     </div>

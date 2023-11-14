@@ -76,8 +76,8 @@ body {
 
 p {
   color: var(--white);
-  font-size: 4rem;
-  margin-bottom: 40px;
+  /* font-size: 4rem; */
+  /* margin-bottom: 40px; */
 }
 
 #df-login {

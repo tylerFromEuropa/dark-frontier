@@ -23,12 +23,12 @@ export default function Characterselection({ myUser, setMyUser, myCharacter, set
       character: Characters[myCharacter],
     };
     setMyUser(newUser);
-    if (userData.userID === user.email) {
-      const API = `https://dark-frontier.onrender.com/users/${userData.myID}`;
-      await axios.put(API, newUser);
-    } else {
+    if (Object.keys(userData).length === 0) {
       const API = "https://dark-frontier.onrender.com/users";
       await axios.post(API, newUser);
+    } else if (userData.userID === user.email) {
+      const API = `https://dark-frontier.onrender.com/users/${userData.myID}`;
+      await axios.put(API, newUser);
     }
   }
 

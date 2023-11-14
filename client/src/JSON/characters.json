@@ -1,46 +1,50 @@
 [
-  {
-    "name": "???",
-    "img": "questionmark.svg",
-    "backstory": "???",
-    "health": 5,
-    "dex": 5,
-    "str": 5,
-    "int": 5,
-    "cha": 5,
-    "end": 5
-  },
-  {
-    "name": "Zarnok",
-    "img": "1_zarnok.webp",
-    "backstory": "As you can tell by his totally normal facial expressions, Zarnok is just a normal dude doing normal space-stuff. He is not at all an unhinged maniac, manically searching for violence, sex and general debauchery.",
-    "health": 5,
-    "dex": 5,
-    "str": 5,
-    "int": 5,
-    "cha": 5,
-    "end": 5
-  },
-  {
-    "name": "Xylophus",
-    "img": "2_xylophus.webp",
-    "backstory": "bla2",
-    "health": 5,
-    "dex": 1,
-    "str": 9,
-    "int": 1,
-    "cha": 9,
-    "end": 5
-  },
-  {
-    "name": "Quasarax",
-    "img": "3_quasarax.webp",
-    "backstory": "bla3",
-    "health": 5,
-    "dex": 9,
-    "str": 1,
-    "int": 9,
-    "cha": 1,
-    "end": 5
-  }
+    {
+        "name": "???",
+        "img": "questionmark.svg",
+        "backstory": "???",
+        "health": 5,
+        "max_health": 5,
+        "dex": 5,
+        "str": 5,
+        "int": 5,
+        "cha": 5,
+        "end": 5
+    },
+    {
+        "name": "Zarnok",
+        "img": "1_zarnok.webp",
+        "backstory": "As you can tell by his totally normal facial expressions, Zarnok is just a normal dude doing normal space-stuff. He is not at all an unhinged maniac, manically searching for violence, sex and general debauchery.",
+        "health": 5,
+        "max_health": 5,
+        "dex": 5,
+        "str": 5,
+        "int": 5,
+        "cha": 5,
+        "end": 5
+    },
+    {
+        "name": "Xylophus",
+        "img": "2_xylophus.webp",
+        "backstory": "bla2",
+        "health": 5,
+        "max_health": 5,
+        "dex": 1,
+        "str": 9,
+        "int": 1,
+        "cha": 9,
+        "end": 5
+    },
+    {
+        "name": "Quasarax",
+        "img": "3_quasarax.webp",
+        "backstory": "bla3",
+        "health": 5,
+        "max_health": 5,
+        "dex": 9,
+        "str": 1,
+        "int": 9,
+        "cha": 1,
+        "end": 5
+    }
 ]

@@ -1,9 +1,3 @@
-#gamecontainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 #charselectcontainer {
   display: flex;
   flex-direction: column;

@@ -2,12 +2,19 @@ import { useEffect, useState } from "react";
 import "./5_PawnShop.css";
 import storyline from "./PawnShopStoryLine.json";
 
-export default function $5_PawnShop({ setCurrentStep, currentStep, myUser, setMyUser }) {
+export default function $5_PawnShop({
+  setCurrentStep,
+  currentStep,
+  myUser,
+  setMyUser,
+}) {
   const [storyChoice, setStoryChoice] = useState(0);
   const [specificChoice, setSpecificChoice] = useState(0);
   const [optionCheck, setOptionCheck] = useState(false);
   const [storyPath, setStoryPath] = useState("story");
-  const [backgroundImageClass, setBackgroundImageClass] = useState("background");
+  const [backgroundImageClass, setBackgroundImageClass] = useState(
+    "background background_pawnshop"
+  );
 
   const [pathArray, setPathArray] = useState({
     buyWheel: false,
@@ -46,7 +53,6 @@ export default function $5_PawnShop({ setCurrentStep, currentStep, myUser, setMy
   return (
     <section className="pawnShop-page">
       <section className={backgroundImageClass}>
-        <img src="" alt="" />
         <p>{storyline[0][storyPath][storyChoice]}</p>
       </section>
       <section className="selections">
@@ -55,7 +61,7 @@ export default function $5_PawnShop({ setCurrentStep, currentStep, myUser, setMy
             <button
               className="useroption"
               onClick={() => {
-                setStoryChoice(storyChoice + 1), setBackgroundImageClass("background skyhawkBG");
+                setStoryChoice(storyChoice + 1);
               }}
             >
               Continue

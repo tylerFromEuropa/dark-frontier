@@ -8,8 +8,14 @@
       "Hahaha, you pathetic creature. It was so easy to take this from you! What makes you think I will give it back?",
       "Choose Carefully"
     ],
-    "spareLife": ["Give it back and I will spare your life!", "NEVER! FIGHT ME!"],
-    "attack": ["You messed with the wrong dude, Pirate! Prepare to die!", "BRING IT!"],
+    "spareLife": [
+      "Give it back and I will spare your life!",
+      "NEVER! FIGHT ME!"
+    ],
+    "attack": [
+      "You messed with the wrong dude, Pirate! Prepare to die!",
+      "BRING IT!"
+    ],
     "blasting": ["WHAT THE..."]
   }
 ]

@@ -29,7 +29,7 @@ export default function Game() {
 
   useEffect(() => {
     getUsers();
-  }, []);
+  }, [userData]);
 
   async function getUsers() {
     const API = `https://dark-frontier.onrender.com/users?userID=${user.email}`;
@@ -39,7 +39,17 @@ export default function Game() {
 
   return (
     <>
-      <Header characters={characters} myCharacter={myCharacter} myUser={myUser} setMyUser={setMyUser} />
+      {currentStep > 0 && (
+        <Header
+          characters={characters}
+          myCharacter={myCharacter}
+          myUser={myUser}
+          setMyUser={setMyUser}
+          getUsers={getUsers}
+          userData={userData}
+          setUserData={setUserData}
+        />
+      )}
       <div id="gamecontainer">
         {currentStep === 0 && (
           <Characterselection
@@ -53,14 +63,54 @@ export default function Game() {
           />
         )}
 
-        {currentStep === 1 && <$1_Backstory currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
-        {currentStep === 2 && <$2_Bar currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
-        {currentStep === 3 && <$3_Skyhawk currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
-        {currentStep === 4 && (
-          <BossOne myUser={myUser} setMyUser={setMyUser} myCharacter={myCharacter} setCurrentStep={setCurrentStep} currentStep={currentStep} />
+        {currentStep === 1 && (
+          <$1_Backstory
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+            myUser={myUser}
+            setMyUser={setMyUser}
+          />
         )}
-        {currentStep === 5 && <VictoryScreen currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
-        {currentStep === 100 && <GameOver setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 2 && (
+          <$2_Bar
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+            myUser={myUser}
+            setMyUser={setMyUser}
+          />
+        )}
+        {currentStep === 3 && (
+          <$3_Skyhawk
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+            myUser={myUser}
+            setMyUser={setMyUser}
+          />
+        )}
+        {currentStep === 4 && (
+          <BossOne
+            myUser={myUser}
+            setMyUser={setMyUser}
+            myCharacter={myCharacter}
+            setCurrentStep={setCurrentStep}
+            currentStep={currentStep}
+          />
+        )}
+        {currentStep === 5 && (
+          <VictoryScreen
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+            myUser={myUser}
+            setMyUser={setMyUser}
+          />
+        )}
+        {currentStep === 100 && (
+          <GameOver
+            setCurrentStep={setCurrentStep}
+            myUser={myUser}
+            setMyUser={setMyUser}
+          />
+        )}
       </div>
     </>
   );

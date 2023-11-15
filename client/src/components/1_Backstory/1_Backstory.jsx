@@ -2,7 +2,12 @@ import { useEffect, useState } from "react";
 import "./1_Backstory.css";
 import storyline from "./Backstory.json";
 
-export default function $1_Backstory({ myUser, setMyUser }) {
+export default function $1_Backstory({
+  myUser,
+  setMyUser,
+  setCurrentStep,
+  currentStep,
+}) {
   const [storyChoice, setStoryChoice] = useState(0);
   const [specificChoice, setSpecificChoice] = useState(0);
   const [optionCheck, setOptionCheck] = useState(false);

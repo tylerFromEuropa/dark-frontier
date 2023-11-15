@@ -55,7 +55,7 @@ export default function $6_Dunecrest({
     } else if (
       (storyChoice === 2 && storyPath === "spareLife") ||
       (storyChoice === 2 && storyPath === "attack") ||
-      (storyChoice === 0 && storyPath === "blasting")
+      (storyChoice === 1 && storyPath === "blasting")
     ) {
       setCurrentStep(15);
     } else {

@@ -9,8 +9,13 @@ export default function Menu(myUser, getUsers, userData, setUserData) {
   const { user } = useAuth0();
   async function deleteUser() {
     const API = `https://dark-frontier.onrender.com/users/${user.email}`;
-    await axios.delete(API);
-    setUserData({});
+
+    try {
+      await axios.delete(API, { withCredentials: true });
+      setUserData({});
+    } catch (error) {
+      console.error("Error deleting user:", error);
+    }
   }
   const [menuSelection, setMenuSelection] = useState("");
   return (
@@ -21,15 +26,7 @@ export default function Menu(myUser, getUsers, userData, setUserData) {
         <div onClick={() => deleteUser()}>Delete User</div>
         <LogoutButton />
       </div>
-      <div id="contentcontainer">
-        {menuSelection === "character" && (
-          <ViewCharacter
-            myUser={myUser}
-            getUsers={getUsers}
-            userData={userData}
-          />
-        )}
-      </div>
+      <div id="contentcontainer">{menuSelection === "character" && <ViewCharacter myUser={myUser} getUsers={getUsers} userData={userData} />}</div>
     </>
   );
 }

@@ -38,7 +38,12 @@ export default function $2_Bar({
     );
     if (storyPath === "hub") {
       setBackgroundImageClass("background background_bar");
-    } else if (storyPath === "hub" && storyChoice === 1) {
+    } else if (
+      (storyPath === "orderDrink" && storyChoice === 1) ||
+      (storyPath === "askPirates" && storyChoice === 1) ||
+      (storyPath === "bartenderNumber" && storyChoice === 1)
+    ) {
+      setBackgroundImageClass("background background_bartender");
     }
   }
 

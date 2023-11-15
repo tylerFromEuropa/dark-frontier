@@ -2,12 +2,19 @@ import { useEffect, useState } from "react";
 import "./3_Skyhawk.css";
 import storyline from "./SkyhawkStoryline.json";
 
-export default function $2_Skyhawk({ setCurrentStep, currentStep, myUser, setMyUser }) {
+export default function $2_Skyhawk({
+  setCurrentStep,
+  currentStep,
+  myUser,
+  setMyUser,
+}) {
   const [storyChoice, setStoryChoice] = useState(0);
   const [specificChoice, setSpecificChoice] = useState(0);
   const [optionCheck, setOptionCheck] = useState(false);
   const [storyPath, setStoryPath] = useState("story");
-  const [backgroundImageClass, setBackgroundImageClass] = useState("background");
+  const [backgroundImageClass, setBackgroundImageClass] = useState(
+    "background background_skyhawk"
+  );
 
   const [pathArray, setPathArray] = useState({
     introduced: false,
@@ -27,7 +34,10 @@ export default function $2_Skyhawk({ setCurrentStep, currentStep, myUser, setMyU
     } else if (storyChoice === 0 && storyPath === "joked") {
       setOptionCheck(true);
       setSpecificChoice(2);
-    } else if ((storyPath === "introduced" && storyChoice == 1) || (storyPath === "demanded" && storyChoice === 1)) {
+    } else if (
+      (storyPath === "introduced" && storyChoice == 1) ||
+      (storyPath === "demanded" && storyChoice === 1)
+    ) {
       setCurrentStep(4);
     } else {
       setOptionCheck(false);
@@ -70,7 +80,7 @@ export default function $2_Skyhawk({ setCurrentStep, currentStep, myUser, setMyU
             <button
               className="useroption"
               onClick={() => {
-                setStoryChoice(storyChoice + 1), setBackgroundImageClass("background skyhawkBG");
+                setStoryChoice(storyChoice + 1);
               }}
             >
               Continue

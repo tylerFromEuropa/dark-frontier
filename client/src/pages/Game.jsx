@@ -37,12 +37,7 @@ export default function Game() {
 
   return (
     <>
-      <Header
-        characters={characters}
-        myCharacter={myCharacter}
-        myUser={myUser}
-        setMyUser={setMyUser}
-      />
+      <Header characters={characters} myCharacter={myCharacter} myUser={myUser} setMyUser={setMyUser} />
       <div id="gamecontainer">
         {currentStep === 0 && (
           <Characterselection
@@ -56,33 +51,11 @@ export default function Game() {
           />
         )}
 
-        {currentStep === 1 && (
-          <BossOne
-            myUser={myUser}
-            setMyUser={setMyUser}
-            myCharacter={myCharacter}
-            setCurrentStep={setCurrentStep}
-            currentStep={currentStep}
-          />
-        )}
         {currentStep === 2 && (
-          <BossOne
-            myUser={myUser}
-            setMyUser={setMyUser}
-            myCharacter={myCharacter}
-            setCurrentStep={setCurrentStep}
-          />
+          <BossOne myUser={myUser} setMyUser={setMyUser} myCharacter={myCharacter} setCurrentStep={setCurrentStep} currentStep={currentStep} />
         )}
-        {currentStep === 1 && (
-          <$1_Backstory myUser={myUser} setMyUser={setMyUser} />
-        )}
-        {currentStep === 100 && (
-          <GameOver
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
+        {currentStep === 1 && <$1_Backstory myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 100 && <GameOver setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
       </div>
     </>
   );

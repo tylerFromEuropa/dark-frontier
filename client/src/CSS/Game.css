@@ -48,3 +48,12 @@ body {
 h1 {
   font-size: 4rem;
 }
+
+.useroption {
+  padding: 20px 50px;
+  background-color: transparent;
+  border: 1px solid var(--yellow);
+  color: var(--yellow);
+  margin-bottom: 20px;
+  text-align: center;
+}

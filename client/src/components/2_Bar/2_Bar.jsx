@@ -2,12 +2,19 @@ import { useEffect, useState } from "react";
 import "./2_Bar.css";
 import storyline from "./BarStoryline.json";
 
-export default function $2_Bar({ setCurrentStep, currentStep, myUser, setMyUser }) {
+export default function $2_Bar({
+  setCurrentStep,
+  currentStep,
+  myUser,
+  setMyUser,
+}) {
   const [storyChoice, setStoryChoice] = useState(0);
   const [specificChoice, setSpecificChoice] = useState(0);
   const [optionCheck, setOptionCheck] = useState(false);
   const [storyPath, setStoryPath] = useState("hub");
-  const [backgroundImageClass, setBackgroundImageClass] = useState("background background_bar");
+  const [backgroundImageClass, setBackgroundImageClass] = useState(
+    "background background_bar"
+  );
 
   const [pathArray, setPathArray] = useState({
     orderDrink: false,
@@ -21,13 +28,20 @@ export default function $2_Bar({ setCurrentStep, currentStep, myUser, setMyUser 
   }, [storyChoice]);
 
   function changeBackground() {
-    console.log(`storyPath:`, storyPath, `storyChoice:`, storyChoice, `backgroundImageClass:`, backgroundImageClass);
+    console.log(
+      `storyPath:`,
+      storyPath,
+      `storyChoice:`,
+      storyChoice,
+      `backgroundImageClass:`,
+      backgroundImageClass
+    );
     if (storyPath === "hub") {
       setBackgroundImageClass("background background_bar");
     } else if (
-      (storyPath === "orderDrink" && storyChoice === 1) ||
-      (storyPath === "askPirates" && storyChoice === 1) ||
-      (storyPath === "bartenderNumber" && storyChoice === 1)
+      (storyPath === "orderDrink" && storyChoice === 0) ||
+      (storyPath === "askPirates" && storyChoice === 0) ||
+      (storyPath === "bartenderNumber" && storyChoice === 0)
     ) {
       setBackgroundImageClass("background background_bartender");
     }
@@ -38,7 +52,10 @@ export default function $2_Bar({ setCurrentStep, currentStep, myUser, setMyUser 
     if (storyChoice === 1 && storyPath === "hub") {
       setOptionCheck(true);
       setSpecificChoice(1);
-    } else if ((storyPath === "orderDrink" && storyChoice === 0) || (storyPath === "bartenderNumber" && storyChoice === 0)) {
+    } else if (
+      (storyPath === "orderDrink" && storyChoice === 0) ||
+      (storyPath === "bartenderNumber" && storyChoice === 0)
+    ) {
       setOptionCheck(true);
       setSpecificChoice(2);
     } else if (storyPath === "askPirates" && storyChoice === 1) {

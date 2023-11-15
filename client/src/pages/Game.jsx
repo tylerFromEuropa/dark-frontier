@@ -63,54 +63,14 @@ export default function Game() {
           />
         )}
 
-        {currentStep === 1 && (
-          <$1_Backstory
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 2 && (
-          <$2_Bar
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 3 && (
-          <$3_Skyhawk
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
+        {currentStep === 1 && <$1_Backstory currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 2 && <$2_Bar currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 3 && <$3_Skyhawk currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
         {currentStep === 4 && (
-          <BossOne
-            myUser={myUser}
-            setMyUser={setMyUser}
-            myCharacter={myCharacter}
-            setCurrentStep={setCurrentStep}
-            currentStep={currentStep}
-          />
+          <BossOne myUser={myUser} setMyUser={setMyUser} myCharacter={myCharacter} setCurrentStep={setCurrentStep} currentStep={currentStep} />
         )}
-        {currentStep === 5 && (
-          <VictoryScreen
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 100 && (
-          <GameOver
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
+        {currentStep === 5 && <VictoryScreen currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 100 && <GameOver setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
       </div>
     </>
   );

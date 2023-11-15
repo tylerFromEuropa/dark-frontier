@@ -1,0 +1,49 @@
+.pawnShop-page {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  color: var(--yellow);
+}
+
+.background {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  height: 100vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.BGcrashsite {
+  background-image: url(background_ship.webp);
+}
+
+.background > p {
+  background-color: #000000b6;
+  padding: 20px 20px;
+  width: 80%;
+}
+
+.selections {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  height: 100vh;
+  background-color: var(--black);
+  background-color: #121212;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}

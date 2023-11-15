@@ -8,7 +8,14 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Characters from "../JSON/characters.json";
 import axios from "axios";
 
-export default function Characterselection({ myUser, setMyUser, myCharacter, setCurrentStep, setCharacter, userData }) {
+export default function Characterselection({
+  myUser,
+  setMyUser,
+  myCharacter,
+  setCurrentStep,
+  setCharacter,
+  userData,
+}) {
   const { user } = useAuth0();
 
   // This creates a very big random number
@@ -44,7 +51,7 @@ export default function Characterselection({ myUser, setMyUser, myCharacter, set
               setCharacter(1);
             }}
             onClick={() => {
-              setCharacter(1), setCurrentStep(3), createUser();
+              setCharacter(1), setCurrentStep(1), createUser();
             }}
           />
           <h3>Zarnok</h3>
@@ -57,7 +64,7 @@ export default function Characterselection({ myUser, setMyUser, myCharacter, set
               setCharacter(2);
             }}
             onClick={() => {
-              setCharacter(2), setCurrentStep(3), createUser();
+              setCharacter(2), setCurrentStep(1), createUser();
             }}
           />{" "}
           <h3>Xylophus</h3>
@@ -70,7 +77,7 @@ export default function Characterselection({ myUser, setMyUser, myCharacter, set
               setCharacter(3);
             }}
             onClick={() => {
-              setCharacter(3), setCurrentStep(3), createUser();
+              setCharacter(3), setCurrentStep(1), createUser();
             }}
           />{" "}
           <h3>Quasarax</h3>

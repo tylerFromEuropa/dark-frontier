@@ -1,0 +1,17 @@
+[
+  {
+    "story": [
+      "You approach Skyhawk, a humanoid mercenary who ended up on Nuccunus a long time ago. She's the type to know everything about everyone's business... Funny how that works, eh? She spares you a glance as you get closer. You feel a bit terrified by the glance.",
+      "Carefully choose your option!"
+    ],
+    "introduced": [
+      "Skyhawk stares at you as you introduce yourself, sparing the occasional nod to acknowledge your words. She informs you that any information you want comes at a cost. You lose 4 coins!",
+      "LOAD FINALE"
+    ],
+    "demanded": [
+      "Skyhawk grunts in your direction and tells you that nothing is free in this world. She tells you to dial it back and that information costs you. You lose 8 coins!",
+      "LOAD FINALE"
+    ],
+    "joked": ["That was a good joke, now... What do you want?"]
+  }
+]

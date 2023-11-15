@@ -1,0 +1,10 @@
+[
+  {
+    "story": [
+      "You arrive at the pawn shop and make your way to the counter to talk to the clerk. While engaged in conversation you spot your steering wheel on one of the shelves! You know it's yours cause it has the same bright red paint with scratches on the left side.",
+      "You ask the clerk about it and inform him that is in fact yours but it is stolen... The clerk lazily glances at the steering wheel behind him then back at you. He informs you that this is now his property and if you want it, you have to buy it.",
+      "Choose Carefully"
+    ],
+    "buyWheel": ["Choose Carefully"]
+  }
+]

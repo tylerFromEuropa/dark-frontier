@@ -7,7 +7,9 @@ export default function $1_Backstory({ myUser, setMyUser }) {
   const [specificChoice, setSpecificChoice] = useState(0);
   const [optionCheck, setOptionCheck] = useState(false);
   const [storyPath, setStoryPath] = useState("story");
-  const [backgroundImageClass, setBackgroundImageClass] = useState("background");
+  const [backgroundImageClass, setBackgroundImageClass] = useState(
+    "background background_crash"
+  );
 
   useEffect(() => {
     checkingStory();
@@ -15,8 +17,35 @@ export default function $1_Backstory({ myUser, setMyUser }) {
   }, [storyChoice]);
 
   function changeBackground() {
-    if ((storyChoice === 2 && storyPath === "waterPathTrue") || (storyChoice === 4 && storyPath === "waterPathFalse")) {
-      setBackgroundImageClass("background");
+    console.log(
+      `storyPath:`,
+      storyPath,
+      `storyChoice:`,
+      storyChoice,
+      `backgroundImageClass:`,
+      backgroundImageClass
+    );
+    if (
+      (storyPath === "story" && storyChoice === 0) ||
+      (storyPath === "waterPathTrue" && storyChoice === 1) ||
+      (storyPath === "waterPathFalse" && storyChoice === 3)
+    ) {
+      setBackgroundImageClass("background background_crash");
+    } else if (storyPath === "story" && storyChoice === 1) {
+      setBackgroundImageClass("background background_ship");
+    } else if (storyPath === "waterPathTrue" && storyChoice === 0) {
+      setBackgroundImageClass("background background_bottle");
+    } else if (storyPath === "waterPathFalse" && storyChoice === 0) {
+      setBackgroundImageClass("background background_bottlecracked");
+    } else if (
+      (storyPath === "waterPathTrue" && storyChoice === 2) ||
+      ("waterPathFalse" && storyChoice === 4)
+    ) {
+      setBackgroundImageClass("background background_gates");
+    } else if ("waterPathFalse" && storyChoice === 5) {
+      setBackgroundImageClass("background background_gatesblur");
+    } else if ("waterPathFalse" && storyChoice === 6) {
+      setBackgroundImageClass("background background_doctor");
     }
   }
   // Checking storychoice and if it is an option we change the optionCheck to true else it stays false
@@ -102,7 +131,7 @@ export default function $1_Backstory({ myUser, setMyUser }) {
             <button
               className="useroption"
               onClick={() => {
-                setStoryChoice(storyChoice + 1), setBackgroundImageClass("background BGcrashsite");
+                setStoryChoice(storyChoice + 1);
               }}
             >
               Continue
@@ -135,7 +164,8 @@ export default function $1_Backstory({ myUser, setMyUser }) {
                 <button
                   className="useroption"
                   onClick={() => {
-                    everyPath(2);
+                    everyPath(2),
+                      setBackgroundImageClass("background background_guns");
                   }}
                 >
                   Explain With Finger Guns

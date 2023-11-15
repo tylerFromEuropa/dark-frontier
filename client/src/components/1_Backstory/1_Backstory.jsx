@@ -2,19 +2,12 @@ import { useEffect, useState } from "react";
 import "./1_Backstory.css";
 import storyline from "./Backstory.json";
 
-export default function $1_Backstory({
-  myUser,
-  setMyUser,
-  setCurrentStep,
-  currentStep,
-}) {
+export default function $1_Backstory({ myUser, setMyUser, setCurrentStep, currentStep }) {
   const [storyChoice, setStoryChoice] = useState(0);
   const [specificChoice, setSpecificChoice] = useState(0);
   const [optionCheck, setOptionCheck] = useState(false);
   const [storyPath, setStoryPath] = useState("story");
-  const [backgroundImageClass, setBackgroundImageClass] = useState(
-    "background background_crash"
-  );
+  const [backgroundImageClass, setBackgroundImageClass] = useState("background background_crash");
 
   useEffect(() => {
     checkingStory();
@@ -22,14 +15,7 @@ export default function $1_Backstory({
   }, [storyChoice]);
 
   function changeBackground() {
-    console.log(
-      `storyPath:`,
-      storyPath,
-      `storyChoice:`,
-      storyChoice,
-      `backgroundImageClass:`,
-      backgroundImageClass
-    );
+    console.log(`storyPath:`, storyPath, `storyChoice:`, storyChoice, `backgroundImageClass:`, backgroundImageClass);
 
     if (
       // text about arriving in the bar
@@ -52,10 +38,7 @@ export default function $1_Backstory({
       setBackgroundImageClass("background background_bottle");
     } else if (storyPath === "waterPathFalse" && storyChoice === 0) {
       setBackgroundImageClass("background background_bottlecracked");
-    } else if (
-      (storyPath === "waterPathTrue" && storyChoice === 2) ||
-      ("waterPathFalse" && storyChoice === 4)
-    ) {
+    } else if ((storyPath === "waterPathTrue" && storyChoice === 2) || ("waterPathFalse" && storyChoice === 4)) {
       setBackgroundImageClass("background background_gates");
     } else if ("waterPathFalse" && storyChoice === 5) {
       setBackgroundImageClass("background background_gatesblur");
@@ -76,12 +59,12 @@ export default function $1_Backstory({
       setSpecificChoice(3);
     } //next story section
     else if (
-      (storyChoice === 2 && storyPath === "guardExplain") ||
-      (storyChoice === 2 && storyPath === "guardFingerGuns") ||
-      (storyChoice === 2 && storyPath === "guardYell") ||
-      (storyChoice === 2 && storyPath === "doctorQuestion") ||
-      (storyChoice === 2 && storyPath === "doctorPanic")
+      (storyChoice === 1 && storyPath === "guardExplain") ||
+      (storyChoice === 1 && storyPath === "guardFingerGuns") ||
+      (storyChoice === 1 && storyPath === "guardYell")
     ) {
+      setCurrentStep(10);
+    } else if ((storyChoice === 1 && storyPath === "doctorQuestion") || (storyChoice === 1 && storyPath === "doctorPanic")) {
       setCurrentStep(2);
     } else {
       setOptionCheck(false);
@@ -188,8 +171,7 @@ export default function $1_Backstory({
                 <button
                   className="useroption"
                   onClick={() => {
-                    everyPath(2),
-                      setBackgroundImageClass("background background_guns");
+                    everyPath(2), setBackgroundImageClass("background background_guns");
                   }}
                 >
                   Explain With Finger Guns

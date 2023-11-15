@@ -7,6 +7,7 @@ import BossOne from "../components/BossFights/BossOne";
 import axios from "axios";
 import $1_Backstory from "../components/1_Backstory/1_Backstory";
 import { useAuth0 } from "@auth0/auth0-react";
+import GameOver from "../components/GameOver";
 
 export default function Game() {
   const [currentStep, setCurrentStep] = useState(0);
@@ -36,7 +37,12 @@ export default function Game() {
 
   return (
     <>
-      <Header characters={characters} myCharacter={myCharacter} myUser={myUser} setMyUser={setMyUser} />
+      <Header
+        characters={characters}
+        myCharacter={myCharacter}
+        myUser={myUser}
+        setMyUser={setMyUser}
+      />
       <div id="gamecontainer">
         {currentStep === 0 && (
           <Characterselection
@@ -51,10 +57,32 @@ export default function Game() {
         )}
 
         {currentStep === 1 && (
-          <BossOne myUser={myUser} setMyUser={setMyUser} myCharacter={myCharacter} setCurrentStep={setCurrentStep} currentStep={currentStep} />
+          <BossOne
+            myUser={myUser}
+            setMyUser={setMyUser}
+            myCharacter={myCharacter}
+            setCurrentStep={setCurrentStep}
+            currentStep={currentStep}
+          />
         )}
-        {currentStep === 2 && <BossOne myUser={myUser} setMyUser={setMyUser} myCharacter={myCharacter} />}
-        {currentStep === 3 && <$1_Backstory myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 2 && (
+          <BossOne
+            myUser={myUser}
+            setMyUser={setMyUser}
+            myCharacter={myCharacter}
+            setCurrentStep={setCurrentStep}
+          />
+        )}
+        {currentStep === 1 && (
+          <$1_Backstory myUser={myUser} setMyUser={setMyUser} />
+        )}
+        {currentStep === 100 && (
+          <GameOver
+            setCurrentStep={setCurrentStep}
+            myUser={myUser}
+            setMyUser={setMyUser}
+          />
+        )}
       </div>
     </>
   );

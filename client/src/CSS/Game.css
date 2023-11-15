@@ -1,5 +1,36 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&display=swap");
+
+/* Variables */
+:root {
+  --font: "Chakra Petch";
+  --yellow: #ffe207;
+  --blue: #003f82;
+  --black: #1b1b1b;
+  --red: #a20000;
+  --white: #f3f3f3;
+  --green: #3e8e41;
+}
+
+/* Default Styles */
 body {
+  background-image: url("../assets/bg_start.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
+}
+
+.bodyOverlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
 #gamecontainer {
@@ -12,4 +43,8 @@ body {
   height: 100vh;
   background-image: url(/background_space_2.jpg);
   background-size: 100% 100%;
+}
+
+h1 {
+  font-size: 4rem;
 }

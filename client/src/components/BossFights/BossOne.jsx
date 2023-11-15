@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "../../CSS/BossOne.css";
 import characters from "../../JSON/characters.json";
 import axios from "axios";
-import GameOver from "./GameOver";
+import GameOver from "../GameOver";
 
 export default function BossOne({
   myCharacter,
@@ -12,6 +12,7 @@ export default function BossOne({
   setCurrentStep,
 }) {
   const [isTurn, setIsTurn] = useState(true);
+
   const [bossOne, setBossOne] = useState({
     health: 15,
     attack: 1.5,
@@ -39,6 +40,7 @@ export default function BossOne({
 
   function handleFight(choice) {
     setIsTurn(!isTurn);
+
     if (choice === "attack") {
       console.log(myUser);
       const attackValue = Math.floor(Math.random() * myUser.character.str) + 1;
@@ -129,6 +131,7 @@ export default function BossOne({
       <div id="leftside">
         <img
           id="leftimage"
+          className={isTurn && "playerhighlight"}
           src={`${characters[myCharacter].img}`}
           alt="this is your character"
         />
@@ -143,7 +146,12 @@ export default function BossOne({
         </div>
       </div>
       <div id="middleright">
-        <img id="rightimage" src="boss1.webp" alt="this is boss1" />
+        <img
+          id="rightimage"
+          className={!isTurn && "playerhighlight"}
+          src="boss1.webp"
+          alt="this is boss1"
+        />
         <p>Sketchy Bartender</p>
         <p>{`Boss health: ${bossOne.health}`}</p>
       </div>

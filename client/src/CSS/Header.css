@@ -34,8 +34,6 @@
 
 #headerchararacter img {
   max-height: 7vh;
-  border: 5px solid var(--black);
-  border-radius: 15px;
 }
 
 .menuopenfalse,

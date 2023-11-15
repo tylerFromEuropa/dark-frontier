@@ -2,12 +2,19 @@ import { useEffect, useState } from "react";
 import "./2_Bar.css";
 import storyline from "./BarStoryline.json";
 
-export default function $2_Bar({ setCurrentStep, currentStep, myUser, setMyUser }) {
+export default function $2_Bar({
+  setCurrentStep,
+  currentStep,
+  myUser,
+  setMyUser,
+}) {
   const [storyChoice, setStoryChoice] = useState(0);
   const [specificChoice, setSpecificChoice] = useState(0);
   const [optionCheck, setOptionCheck] = useState(false);
   const [storyPath, setStoryPath] = useState("hub");
-  const [backgroundImageClass, setBackgroundImageClass] = useState("background");
+  const [backgroundImageClass, setBackgroundImageClass] = useState(
+    "background background_bar"
+  );
 
   const [pathArray, setPathArray] = useState({
     orderDrink: false,
@@ -17,14 +24,33 @@ export default function $2_Bar({ setCurrentStep, currentStep, myUser, setMyUser 
 
   useEffect(() => {
     checkingStory();
+    changeBackground();
   }, [storyChoice]);
+
+  function changeBackground() {
+    console.log(
+      `storyPath:`,
+      storyPath,
+      `storyChoice:`,
+      storyChoice,
+      `backgroundImageClass:`,
+      backgroundImageClass
+    );
+    if (storyPath === "hub") {
+      setBackgroundImageClass("background background_bar");
+    } else if (storyPath === "hub" && storyChoice === 1) {
+    }
+  }
 
   // Checking storychoice and if it is an option we change the optionCheck to true else it stays false
   function checkingStory() {
     if (storyChoice === 0 && storyPath === "hub") {
       setOptionCheck(true);
       setSpecificChoice(1);
-    } else if ((storyChoice === 1 && storyPath === "orderDrink") || (storyChoice === 1 && storyPath === "bartenderNumber")) {
+    } else if (
+      (storyChoice === 1 && storyPath === "orderDrink") ||
+      (storyChoice === 1 && storyPath === "bartenderNumber")
+    ) {
       setOptionCheck(true);
       setSpecificChoice(2);
     }
@@ -52,7 +78,10 @@ export default function $2_Bar({ setCurrentStep, currentStep, myUser, setMyUser 
         setStoryPath("bartenderNumber");
         setStoryChoice(1);
       }
-    } else if ((storyChoice === 1 && storyPath === "orderDrink") || (storyChoice === 1 && storyPath === "bartenderNumber")) {
+    } else if (
+      (storyChoice === 1 && storyPath === "orderDrink") ||
+      (storyChoice === 1 && storyPath === "bartenderNumber")
+    ) {
       if (optionNum === 1 || optionNum === 3) {
         setStoryPath("hub");
         setStoryChoice(0);
@@ -72,7 +101,8 @@ export default function $2_Bar({ setCurrentStep, currentStep, myUser, setMyUser 
             <button
               className="useroption"
               onClick={() => {
-                setStoryChoice(storyChoice + 1), setBackgroundImageClass("background barBG");
+                setStoryChoice(storyChoice + 1),
+                  setBackgroundImageClass("background barBG");
               }}
             >
               Continue

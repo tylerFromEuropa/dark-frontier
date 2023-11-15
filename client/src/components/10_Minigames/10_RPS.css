@@ -1,0 +1,28 @@
+.rps-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  background-color: var(--black);
+  color: var(--yellow);
+  height: 100vh;
+}
+.character-image {
+  max-width: 250px;
+  margin-top: 20px;
+}
+.guards-image {
+  max-width: 400px;
+}
+
+.character-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.character-choice {
+  width: 125px;
+}
+.userChoice {
+  color: var(--white);
+}

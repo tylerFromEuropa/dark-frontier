@@ -29,19 +29,21 @@ export default function Header({
           </div>
         </div>
       )}
-      <div
-        onClick={() => setMenuStatus(!menuStatus)}
-        className={`menuopen${menuStatus}`}
-      ></div>
       <div>
-        {menuStatus && (
-          <Menu
-            setMyUser={setMyUser}
-            getUsers={getUsers}
-            userData={userData}
-            setUserData={setUserData}
-          />
-        )}
+        <div
+          onClick={() => setMenuStatus(!menuStatus)}
+          className={`menuopen${menuStatus}`}
+        ></div>
+        <div>
+          {menuStatus && (
+            <Menu
+              setMyUser={setMyUser}
+              getUsers={getUsers}
+              userData={userData}
+              setUserData={setUserData}
+            />
+          )}
+        </div>
       </div>
     </div>
   );

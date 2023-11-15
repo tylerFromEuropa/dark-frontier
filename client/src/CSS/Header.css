@@ -45,6 +45,8 @@
   padding: 10px;
   background-size: 3rem 3rem;
   border-radius: 10px;
+  z-index: 5000000;
+  position: relative;
 }
 
 .menuopenfalse {

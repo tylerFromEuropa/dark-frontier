@@ -42,7 +42,6 @@ export default function Game() {
     const res = await axios.get(API);
     setUserData(res.data[0]);
   }
-
   return (
     <>
       {currentStep > 0 && (
@@ -69,94 +68,17 @@ export default function Game() {
           />
         )}
 
-        {currentStep === 1 && (
-          <$1_Backstory
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 2 && (
-          <$2_Bar
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 3 && (
-          <$3_Skyhawk
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 4 && (
-          <$4_PlaceVisit
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 5 && (
-          <$5_PawnShop
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 6 && (
-          <$6_Dunecrest
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 7 && (
-          <$7_Spaceship
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 10 && (
-          <$10_RPS
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 15 && (
-          <BossOne
-            myUser={myUser}
-            setMyUser={setMyUser}
-            myCharacter={myCharacter}
-            setCurrentStep={setCurrentStep}
-            currentStep={currentStep}
-          />
-        )}
-        {currentStep === 99 && (
-          <GameVictory
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 100 && (
-          <GameOver
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
+        {currentStep === 1 && <$1_Backstory currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 2 && <$2_Bar currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 3 && <$3_Skyhawk currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 4 && <$4_PlaceVisit currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 5 && <$5_PawnShop currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 6 && <$6_Dunecrest currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 7 && <$7_Spaceship currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 10 && <$10_RPS currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 15 && <BossOne myCharacter={myCharacter} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 99 && <GameVictory currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 100 && <GameOver setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
       </div>
     </>
   );

@@ -11,14 +11,8 @@ export default function $1_Backstory({ myUser, setMyUser }) {
 
   useEffect(() => {
     checkingStory();
-    changeBackground();
   }, [storyChoice]);
 
-  function changeBackground() {
-    if ((storyChoice === 2 && storyPath === "waterPathTrue") || (storyChoice === 4 && storyPath === "waterPathFalse")) {
-      setBackgroundImageClass("background");
-    }
-  }
   // Checking storychoice and if it is an option we change the optionCheck to true else it stays false
   function checkingStory() {
     if (storyChoice === 1 && storyPath === "story") {
@@ -120,56 +114,6 @@ export default function $1_Backstory({ myUser, setMyUser }) {
               >
                 Find Some Water
               </button>
-            )}
-
-            {specificChoice === 2 && (
-              <div>
-                <button
-                  className="useroption"
-                  onClick={() => {
-                    everyPath(1);
-                  }}
-                >
-                  Explain Using Sound Effects
-                </button>
-                <button
-                  className="useroption"
-                  onClick={() => {
-                    everyPath(2);
-                  }}
-                >
-                  Explain With Finger Guns
-                </button>
-                <button
-                  className="useroption"
-                  onClick={() => {
-                    everyPath(3);
-                  }}
-                >
-                  Yell at them!
-                </button>
-              </div>
-            )}
-
-            {specificChoice === 3 && (
-              <div>
-                <button
-                  className="useroption"
-                  onClick={() => {
-                    everyPath(1);
-                  }}
-                >
-                  Question Doctor
-                </button>
-                <button
-                  className="useroption"
-                  onClick={() => {
-                    everyPath(2);
-                  }}
-                >
-                  Stand Up & Remove Attached Devices
-                </button>
-              </div>
             )}
           </div>
         )}

@@ -9,9 +9,10 @@ export default function Menu(myUser, getUsers, userData, setUserData) {
   const { user } = useAuth0();
   async function deleteUser() {
     const API = `https://dark-frontier.onrender.com/users?userID=${user.email}`;
+    console.log(API);
 
     try {
-      await axios.delete(API, { withCredentials: true });
+      await axios.delete(API);
       setUserData({});
     } catch (error) {
       console.error("Error deleting user:", error);

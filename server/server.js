@@ -39,8 +39,8 @@ app.put("/users/:id", async (request, response) => {
   response.json(updatedUser);
 });
 
-app.delete("/users/:id", async (request, response) => {
-  const deletedUser = await Users.findOneAndDelete({ myID: request.params.id }, { new: true });
+app.delete("/users", async (request, response) => {
+  const deletedUser = await Users.findOneAndDelete(request.query);
   response.json(deletedUser);
 });
 

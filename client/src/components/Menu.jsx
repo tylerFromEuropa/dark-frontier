@@ -8,7 +8,7 @@ import axios from "axios";
 export default function Menu(myUser, getUsers, userData, setUserData) {
   const { user } = useAuth0();
   async function deleteUser() {
-    const API = `https://dark-frontier.onrender.com/users/${user.email}`;
+    const API = `https://dark-frontier.onrender.com/users?userID=${user.email}`;
 
     try {
       await axios.delete(API, { withCredentials: true });

@@ -4,13 +4,7 @@ import characters from "../../JSON/characters.json";
 import axios from "axios";
 import GameOver from "../GameOver";
 
-export default function BossOne({
-  myCharacter,
-  myUser,
-  setMyUser,
-  currentStep,
-  setCurrentStep,
-}) {
+export default function BossOne({ myCharacter, myUser, setMyUser, currentStep, setCurrentStep }) {
   const [isTurn, setIsTurn] = useState(true);
 
   const [bossOne, setBossOne] = useState({
@@ -20,9 +14,7 @@ export default function BossOne({
     name: "Captain Celestial Scourge",
     img_URL: "",
   });
-  const [fightDescription, setFightDescription] = useState([
-    "It's bossfight o'clock, mofos!",
-  ]);
+  const [fightDescription, setFightDescription] = useState(["It's bossfight o'clock, mofos!"]);
 
   async function updateUser() {
     const API = `https://dark-frontier.onrender.com/users/${myUser.myID}`;
@@ -48,10 +40,7 @@ export default function BossOne({
         ...bossOne,
         health: newBossHealth,
       });
-      setFightDescription([
-        ...fightDescription,
-        `You attack and inflict a damage of ${attackValue}!`,
-      ]);
+      setFightDescription([...fightDescription, `You attack and inflict a damage of ${attackValue}!`]);
     } else if (choice === "talk") {
       setBossOne({
         ...bossOne,
@@ -86,17 +75,13 @@ export default function BossOne({
           health: myUser.character.health - damageEffect,
         },
       });
-      setFightDescription([
-        ...fightDescription,
-        `You try to dodge the attack, but you still take a hit of ${damageEffect} damage.`,
-      ]);
+      setFightDescription([...fightDescription, `You try to dodge the attack, but you still take a hit of ${damageEffect} damage.`]);
     } else if (choice === "counter-attack") {
       const bossAttackValue = Math.floor(Math.random() * bossOne.attack) + 1;
       const counterAttackEffect = Math.random() * myUser.character.dex + 1;
       const counterChance = counterAttackEffect / 10;
       if (counterChance > 0.25) {
-        const attackValue =
-          Math.floor(Math.random() * myUser.character.str) + 1;
+        const attackValue = Math.floor(Math.random() * myUser.character.str) + 1;
         const newBossHealth = bossOne.health - attackValue;
         setBossOne({
           ...bossOne,
@@ -132,12 +117,7 @@ export default function BossOne({
   return (
     <div id="bossfightcontainer">
       <div id="leftside">
-        <img
-          id="leftimage"
-          className={isTurn && "playerhighlight"}
-          src={`${characters[myCharacter].img}`}
-          alt="this is your character"
-        />
+        <img id="leftimage" className={isTurn && "playerhighlight"} src={`${characters[myCharacter].img}`} alt="this is your character" />
         <p>{`${myUser.character.name}`}</p>
         <p>{`Player health: ${myUser.character.health}`}</p>
       </div>
@@ -149,12 +129,7 @@ export default function BossOne({
         </div>
       </div>
       <div id="middleright">
-        <img
-          id="rightimage"
-          className={!isTurn && "playerhighlight"}
-          src="boss1.webp"
-          alt="this is boss1"
-        />
+        <img id="rightimage" className={!isTurn && "playerhighlight"} src="boss1.webp" alt="this is boss1" />
         <p>Sketchy Bartender</p>
         <p>{`Boss health: ${bossOne.health}`}</p>
         <p>{`Boss friendliness: ${bossOne.friendly}`}</p>
@@ -215,7 +190,7 @@ export default function BossOne({
       </div>
 
       {myUser.character.health < 1 && setCurrentStep(100)}
-      {bossOne.health < 1 && setCurrentStep(5)}
+      {bossOne.health < 1 && setCurrentStep(1)}
     </div>
   );
 }

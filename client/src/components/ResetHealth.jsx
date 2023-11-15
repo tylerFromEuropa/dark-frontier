@@ -15,7 +15,7 @@ export default function ResetHealth({ myUser, setMyUser, setCurrentStep }) {
     } catch (error) {
       console.error("Error updating user:", error);
     }
-    setCurrentStep(0);
+    setCurrentStep(7);
   }
 
   return (

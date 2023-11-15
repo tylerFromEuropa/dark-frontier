@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./2_Bar.css";
 import storyline from "./BarStoryline.json";
 
-export default function $2_Bar({ myUser, setMyUser }) {
+export default function $2_Bar({ setCurrentStep, currentStep, myUser, setMyUser }) {
   const [storyChoice, setStoryChoice] = useState(0);
   const [specificChoice, setSpecificChoice] = useState(0);
   const [optionCheck, setOptionCheck] = useState(false);
@@ -27,6 +27,10 @@ export default function $2_Bar({ myUser, setMyUser }) {
     } else if ((storyChoice === 1 && storyPath === "orderDrink") || (storyChoice === 1 && storyPath === "bartenderNumber")) {
       setOptionCheck(true);
       setSpecificChoice(2);
+    }
+    // Next step in the story
+    else if (storyPath === "askPirates" && storyChoice === 2) {
+      setCurrentStep(3);
     } else {
       setOptionCheck(false);
       setSpecificChoice(0);

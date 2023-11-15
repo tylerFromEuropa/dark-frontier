@@ -6,6 +6,8 @@ import characters from "../JSON/characters.json";
 import BossOne from "../components/BossFights/BossOne";
 import axios from "axios";
 import $1_Backstory from "../components/1_Backstory/1_Backstory";
+import $2_Bar from "../components/2_Bar/2_Bar";
+import $3_Skyhawk from "../components/3_Skyhawk/3_Skyhawk";
 import { useAuth0 } from "@auth0/auth0-react";
 import GameOver from "../components/GameOver";
 
@@ -51,10 +53,13 @@ export default function Game() {
           />
         )}
 
-        {currentStep === 2 && (
+        {currentStep === 1 && <$1_Backstory currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 2 && <$2_Bar currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 3 && <$3_Skyhawk currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 4 && (
           <BossOne myUser={myUser} setMyUser={setMyUser} myCharacter={myCharacter} setCurrentStep={setCurrentStep} currentStep={currentStep} />
         )}
-        {currentStep === 1 && <$1_Backstory myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 5 && <VictoryScreen currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
         {currentStep === 100 && <GameOver setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
       </div>
     </>

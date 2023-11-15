@@ -7,7 +7,7 @@ const LoginButton = () => {
 
     return (
         <div className="loginContainer">
-            <p>
+            <p id="welcome-title">
                 Welcome to <span id="df-login">Dark Frontier</span>
             </p>
             <button className="loginButton" onClick={() => loginWithRedirect()}>

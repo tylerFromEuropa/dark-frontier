@@ -11,6 +11,7 @@ import $4_PlaceVisit from "../components/4_PlaceVisit/4_PlaceVisit";
 import $5_PawnShop from "../components/5_PawnShop/5_PawnShop";
 import $6_Dunecrest from "../components/6_Dunecrest/6_Dunecrest";
 import $7_Spaceship from "../components/7_Spaceship/7_Spaceship";
+import $10_RPS from "../components/10_Minigames/10_RPS";
 import $15_BossOne from "../components/BossFights/BossOne";
 import { useAuth0 } from "@auth0/auth0-react";
 import GameOver from "../components/GameOver";
@@ -74,6 +75,7 @@ export default function Game() {
         {currentStep === 5 && <$5_PawnShop currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
         {currentStep === 6 && <$6_Dunecrest currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
         {currentStep === 7 && <$7_Spaceship currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 10 && <$10_RPS currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
         {currentStep === 15 && (
           <$15_BossOne myUser={myUser} setMyUser={setMyUser} myCharacter={myCharacter} setCurrentStep={setCurrentStep} currentStep={currentStep} />
         )}

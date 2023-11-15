@@ -3,7 +3,13 @@ import "../CSS/Header.css";
 import Menu from "./Menu";
 import characters from "../JSON/characters.json";
 
-export default function Header({ myCharacter, myUser, setMyUser }) {
+export default function Header({
+  myUser,
+  setMyUser,
+  getUsers,
+  userData,
+  setUserData,
+}) {
   const [menuStatus, setMenuStatus] = useState(false);
 
   const healthDivs = [];
@@ -26,8 +32,16 @@ export default function Header({ myCharacter, myUser, setMyUser }) {
       <div
         onClick={() => setMenuStatus(!menuStatus)}
         className={`menuopen${menuStatus}`}
-      >
-        {menuStatus && <Menu />}
+      ></div>
+      <div>
+        {menuStatus && (
+          <Menu
+            setMyUser={setMyUser}
+            getUsers={getUsers}
+            userData={userData}
+            setUserData={setUserData}
+          />
+        )}
       </div>
     </div>
   );

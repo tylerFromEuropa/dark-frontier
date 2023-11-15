@@ -22,8 +22,20 @@
   background-size: 100% 100%;
 }
 
-.BGcrashsite {
-  background-image: url(background_ship.webp);
+.background_town {
+  background-image: url(background_town.webp);
+}
+
+.background_townbar {
+  background-image: url(background_townbar.webp);
+}
+
+.background_scourge {
+  background-image: url(background_scourge.webp);
+}
+
+.background_scourgebig {
+  background-image: url(background_scourgebig.webp);
 }
 
 .background > p {

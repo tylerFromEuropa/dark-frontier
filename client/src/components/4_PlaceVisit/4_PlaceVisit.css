@@ -22,8 +22,8 @@
   background-size: 100% 100%;
 }
 
-.BGcrashsite {
-  background-image: url(background_ship.webp);
+.background_city {
+  background-image: url(background_city.webp);
 }
 
 .background > p {

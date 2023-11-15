@@ -2,12 +2,19 @@ import { useEffect, useState } from "react";
 import "./7_Spaceship.css";
 import storyline from "./SpaceshipStoryLine.json";
 
-export default function $7_Spaceship({ setCurrentStep, currentStep, myUser, setMyUser }) {
+export default function $7_Spaceship({
+  setCurrentStep,
+  currentStep,
+  myUser,
+  setMyUser,
+}) {
   const [storyChoice, setStoryChoice] = useState(0);
   const [specificChoice, setSpecificChoice] = useState(0);
   const [optionCheck, setOptionCheck] = useState(false);
   const [storyPath, setStoryPath] = useState("story");
-  const [backgroundImageClass, setBackgroundImageClass] = useState("background");
+  const [backgroundImageClass, setBackgroundImageClass] = useState(
+    "background background_ship"
+  );
 
   const [pathArray, setPathArray] = useState({
     spareLife: false,
@@ -49,7 +56,8 @@ export default function $7_Spaceship({ setCurrentStep, currentStep, myUser, setM
             <button
               className="useroption"
               onClick={() => {
-                setStoryChoice(storyChoice + 1), setBackgroundImageClass("background skyhawkBG");
+                setStoryChoice(storyChoice + 1),
+                  setBackgroundImageClass("background skyhawkBG");
               }}
             >
               Continue

@@ -2,12 +2,19 @@ import { useEffect, useState } from "react";
 import "./6_Dunecrest.css";
 import storyline from "./DunecrestStoryLine.json";
 
-export default function $6_Dunecrest({ setCurrentStep, currentStep, myUser, setMyUser }) {
+export default function $6_Dunecrest({
+  setCurrentStep,
+  currentStep,
+  myUser,
+  setMyUser,
+}) {
   const [storyChoice, setStoryChoice] = useState(0);
   const [specificChoice, setSpecificChoice] = useState(0);
   const [optionCheck, setOptionCheck] = useState(false);
   const [storyPath, setStoryPath] = useState("story");
-  const [backgroundImageClass, setBackgroundImageClass] = useState("background");
+  const [backgroundImageClass, setBackgroundImageClass] = useState(
+    "background background_town"
+  );
 
   const [pathArray, setPathArray] = useState({
     spareLife: false,
@@ -17,7 +24,28 @@ export default function $6_Dunecrest({ setCurrentStep, currentStep, myUser, setM
 
   useEffect(() => {
     checkingStory();
+    changeBackground();
   }, [storyChoice]);
+
+  function changeBackground() {
+    console.log(
+      `storyPath:`,
+      storyPath,
+      `storyChoice:`,
+      storyChoice,
+      `backgroundImageClass:`,
+      backgroundImageClass
+    );
+    if (storyPath === "story" && storyChoice === 0) {
+      setBackgroundImageClass("background background_town");
+    } else if (storyPath === "story" && storyChoice === 1) {
+      setBackgroundImageClass("background background_townbar");
+    } else if (storyPath === "story" && storyChoice === 2) {
+      setBackgroundImageClass("background background_scourge");
+    } else if (storyPath === "story" && storyChoice === 3) {
+      setBackgroundImageClass("background background_scourgebig");
+    }
+  }
 
   // Checking storychoice and if it is an option we change the optionCheck to true else it stays false
   function checkingStory() {
@@ -63,7 +91,7 @@ export default function $6_Dunecrest({ setCurrentStep, currentStep, myUser, setM
             <button
               className="useroption"
               onClick={() => {
-                setStoryChoice(storyChoice + 1), setBackgroundImageClass("background skyhawkBG");
+                setStoryChoice(storyChoice + 1);
               }}
             >
               Continue

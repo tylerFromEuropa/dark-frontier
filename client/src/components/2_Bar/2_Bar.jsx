@@ -1,13 +1,19 @@
 import { useEffect, useState } from "react";
-import "./1_Backstory.css";
-import storyline from "./Backstory.json";
+import "./2_Bar.css";
+import storyline from "./BarStoryline.json";
 
-export default function $1_Backstory({ myUser, setMyUser }) {
+export default function $2_Bar({ myUser, setMyUser }) {
   const [storyChoice, setStoryChoice] = useState(0);
   const [specificChoice, setSpecificChoice] = useState(0);
   const [optionCheck, setOptionCheck] = useState(false);
-  const [storyPath, setStoryPath] = useState("story");
+  const [storyPath, setStoryPath] = useState("hub");
   const [backgroundImageClass, setBackgroundImageClass] = useState("background");
+
+  const [pathArray, setPathArray] = useState({
+    orderDrink: false,
+    askPirates: false,
+    bartenderNumber: false,
+  });
 
   useEffect(() => {
     checkingStory();
@@ -15,15 +21,12 @@ export default function $1_Backstory({ myUser, setMyUser }) {
 
   // Checking storychoice and if it is an option we change the optionCheck to true else it stays false
   function checkingStory() {
-    if (storyChoice === 1 && storyPath === "story") {
+    if (storyChoice === 0 && storyPath === "hub") {
       setOptionCheck(true);
       setSpecificChoice(1);
-    } else if (storyChoice === 3 && storyPath === "waterPathTrue") {
+    } else if ((storyChoice === 1 && storyPath === "orderDrink") || (storyChoice === 1 && storyPath === "bartenderNumber")) {
       setOptionCheck(true);
       setSpecificChoice(2);
-    } else if (storyChoice === 6 && storyPath === "waterPathFalse") {
-      setOptionCheck(true);
-      setSpecificChoice(3);
     } else {
       setOptionCheck(false);
       setSpecificChoice(0);
@@ -31,61 +34,30 @@ export default function $1_Backstory({ myUser, setMyUser }) {
   }
 
   function everyPath(optionNum) {
-    const pathArray = {
-      gotWater: false,
-      guardExplain: false,
-      guardFingerGuns: false,
-      guardYell: false,
-      doctorQuestion: false,
-      doctorPanic: false,
-    };
-
-    const randomNumber = Math.random();
-    if (randomNumber <= 0.5) {
-      pathArray.gotWater = false;
-    } else {
-      pathArray.gotWater = true;
-    }
-    if (pathArray.gotWater === true && storyPath === "story") {
-      setStoryChoice(0);
-      setStoryPath("waterPathTrue");
-    } else if (pathArray.gotWater === false && storyPath === "story") {
-      setStoryChoice(0);
-      setStoryPath("waterPathFalse");
-    }
-
-    if (specificChoice === 2) {
+    if (storyPath === "hub" && storyChoice === 0) {
       if (optionNum === 1) {
-        pathArray.guardExplain = true;
-        setStoryChoice(0);
-        setStoryPath("guardExplain");
+        setPathArray({ ...pathArray, orderDrink: true });
+        setStoryPath("orderDrink");
+        setStoryChoice(1);
       } else if (optionNum === 2) {
-        pathArray.guardFingerGuns = true;
-        setStoryChoice(0);
-        setStoryPath("guardFingerGuns");
+        setPathArray({ ...pathArray, askPirates: true });
+        setStoryPath("askPirates");
+        setStoryChoice(1);
       } else if (optionNum === 3) {
-        pathArray.guardYell = true;
-        setStoryChoice(0);
-        setStoryPath("guardYell");
+        setPathArray({ ...pathArray, bartenderNumber: true });
+        setStoryPath("bartenderNumber");
+        setStoryChoice(1);
       }
-    }
-
-    if (specificChoice === 3) {
-      if (optionNum === 1) {
-        pathArray.doctorQuestion = true;
-        setStoryChoice(storyChoice + 1);
+    } else if ((storyChoice === 1 && storyPath === "orderDrink") || (storyChoice === 1 && storyPath === "bartenderNumber")) {
+      if (optionNum === 1 || optionNum === 3) {
+        setStoryPath("hub");
         setStoryChoice(0);
-        setStoryPath("doctorQuestion");
-      } else if (optionNum === 2) {
-        pathArray.doctorPanic = true;
-        setStoryChoice(0);
-        setStoryPath("doctorPanic");
       }
     }
   }
 
   return (
-    <section className="backstory-page">
+    <section className="bar-page">
       <section className={backgroundImageClass}>
         <img src="" alt="" />
         <p>{storyline[0][storyPath][storyChoice]}</p>
@@ -96,7 +68,7 @@ export default function $1_Backstory({ myUser, setMyUser }) {
             <button
               className="useroption"
               onClick={() => {
-                setStoryChoice(storyChoice + 1), setBackgroundImageClass("background BGcrashsite");
+                setStoryChoice(storyChoice + 1), setBackgroundImageClass("background barBG");
               }}
             >
               Continue
@@ -106,14 +78,49 @@ export default function $1_Backstory({ myUser, setMyUser }) {
         {optionCheck && (
           <div>
             {specificChoice === 1 && (
-              <button
-                className="useroption"
-                onClick={() => {
-                  everyPath(1);
-                }}
-              >
-                Find Some Water
-              </button>
+              <div>
+                {!pathArray.orderDrink && (
+                  <button
+                    className="useroption"
+                    onClick={() => {
+                      everyPath(1);
+                    }}
+                  >
+                    Order a drink
+                  </button>
+                )}
+                <button
+                  className="useroption"
+                  onClick={() => {
+                    everyPath(2);
+                  }}
+                >
+                  Ask about Pirates
+                </button>
+                {!pathArray.bartenderNumber && (
+                  <button
+                    className="useroption"
+                    onClick={() => {
+                      everyPath(3);
+                    }}
+                  >
+                    Ask Bartender for their number!
+                  </button>
+                )}
+              </div>
+            )}
+
+            {specificChoice === 2 && (
+              <div>
+                <button
+                  className="useroption"
+                  onClick={() => {
+                    everyPath(1);
+                  }}
+                >
+                  Continue
+                </button>
+              </div>
             )}
           </div>
         )}

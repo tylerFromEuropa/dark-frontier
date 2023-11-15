@@ -1,0 +1,76 @@
+.about-container {
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    background-blend-mode: normal;
+    background: linear-gradient(50deg, rgba(255, 208, 0, 0.4), rgba(10, 10, 10, 0.8) 77%);
+    border-radius: 10px;
+    box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
+    margin: 0 auto;
+    margin-bottom: 15%;
+    margin-top: 75px;
+    height: 60%;
+    max-width: 1300px;
+    overflow: hidden;
+}
+
+#about-df-title {
+    border: none;
+    background-color: var(--yellow);
+    color: var(--black);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 3rem;
+    padding: 10px 0 10px 40px;
+}
+
+#title-link {
+    text-decoration: none;
+}
+
+#about-game {
+    color: var(--yellow);
+    font-size: 2rem;
+    padding: 30px 0 15px 50px;
+    text-transform: uppercase;
+}
+
+#about-game-desc {
+    padding: 15px 50px 15px 50px;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.about-team {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.about-team aside {
+    width: 400px;
+    padding: 20px;
+}
+
+.about-team h3 {
+    font-size: 1.4rem;
+    color: var(--yellow);
+    padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 950px) {
+    .about-container {
+        overflow-y: scroll;
+        padding: 0 40px;
+        max-width: 80%;
+        height: 80%;
+        margin: 50px auto;
+    }
+
+    .about-team {
+        display: block;
+        margin: 0 auto 0 20px;
+    }
+}

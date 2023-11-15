@@ -69,6 +69,15 @@ export default function $1_Backstory({ myUser, setMyUser }) {
     } else if (storyChoice === 6 && storyPath === "waterPathFalse") {
       setOptionCheck(true);
       setSpecificChoice(3);
+    } //next story section
+    else if (
+      (storyChoice === 2 && storyPath === "guardExplain") ||
+      (storyChoice === 2 && storyPath === "guardFingerGuns") ||
+      (storyChoice === 2 && storyPath === "guardYell") ||
+      (storyChoice === 2 && storyPath === "doctorQuestion") ||
+      (storyChoice === 2 && storyPath === "doctorPanic")
+    ) {
+      setCurrentStep(2);
     } else {
       setOptionCheck(false);
       setSpecificChoice(0);

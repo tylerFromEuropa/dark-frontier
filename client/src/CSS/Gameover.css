@@ -1,27 +1,30 @@
-#gameovercontent {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  font-weight: bolder;
-  color: var(--yellow);
+#gameovercontent,
+#gamevictorycontent {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    font-weight: bolder;
+    color: var(--yellow);
 }
 
-#gameovercontent button {
-  cursor: pointer;
-  background-color: var(--yellow);
-  border: none;
-  font-size: 3rem;
-  padding: 20px 75px;
-  font-family: var(--font);
-  font-weight: 800;
-  transition: 150ms;
-  border: 1px solid var(--yellow);
-  width: 100%;
-  margin-top: 20px;
+#gameovercontent button,
+#gamevictorycontent button {
+    cursor: pointer;
+    background-color: var(--yellow);
+    border: none;
+    font-size: 3rem;
+    padding: 20px 75px;
+    font-family: var(--font);
+    font-weight: 800;
+    transition: 150ms;
+    border: 1px solid var(--yellow);
+    width: 100%;
+    margin-top: 20px;
 }
 
-#gameovercontent button:hover {
-  background-color: var(--black);
-  border: 1px solid var(--yellow);
-  color: var(--yellow);
+#gameovercontent button:hover,
+#gamevictorycontent button:hover {
+    background-color: var(--black);
+    border: 1px solid var(--yellow);
+    color: var(--yellow);
 }

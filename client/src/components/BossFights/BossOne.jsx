@@ -5,6 +5,7 @@ import axios from "axios";
 import GameOver from "../GameOver";
 
 export default function BossOne({ myCharacter, myUser, setMyUser, currentStep, setCurrentStep }) {
+
   const [isTurn, setIsTurn] = useState(true);
 
   const [bossOne, setBossOne] = useState({
@@ -16,24 +17,24 @@ export default function BossOne({ myCharacter, myUser, setMyUser, currentStep, s
   });
   const [fightDescription, setFightDescription] = useState(["It's bossfight o'clock, mofos!"]);
 
-  async function updateUser() {
-    const API = `https://dark-frontier.onrender.com/users/${myUser.myID}`;
-    try {
-      await axios.put(API, myUser);
-    } catch (error) {
-      console.error("Error updating user:", error);
+    async function updateUser() {
+        const API = `https://dark-frontier.onrender.com/users/${myUser.myID}`;
+        try {
+            await axios.put(API, myUser);
+        } catch (error) {
+            console.error("Error updating user:", error);
+        }
     }
-  }
 
-  // We are doing useEffect whenever the myUser state variable is changed which then runs and updates it to the database on MongoDB in the updateUser() function
-  useEffect(() => {
-    updateUser();
-  }, [myUser]);
+    // We are doing useEffect whenever the myUser state variable is changed which then runs and updates it to the database on MongoDB in the updateUser() function
+    useEffect(() => {
+        updateUser();
+    }, [myUser]);
 
-  function handleFight(choice) {
-    setIsTurn(!isTurn);
+    function handleFight(choice) {
+        setIsTurn(!isTurn);
 
-    if (choice === "attack") {
+      if (choice === "attack") {
       const attackValue = Math.floor(Math.random() * myUser.character.str) + 1;
       const newBossHealth = bossOne.health - attackValue;
       setBossOne({
@@ -54,12 +55,12 @@ export default function BossOne({ myCharacter, myUser, setMyUser, currentStep, s
         ...fightDescription,
         `You try to to make the guy your friend my offering to buy him a drink. Success!
         (boss was friendly = ${bossOne.friendly} and you had a charisma of ${myUser.character.cha})`,
-      ]);
-    } else if (choice === "dodge") {
-      const bossAttackValue = Math.floor(Math.random() * bossOne.attack) + 1;
-      const dodgeEffect = Math.random() * myUser.character.dex;
-      const dodgeChance = dodgeEffect / 10;
-      let damageEffect = Math.floor(bossAttackValue * (1 - dodgeChance));
+            ]);
+        } else if (choice === "dodge") {
+            const bossAttackValue = Math.floor(Math.random() * bossOne.attack) + 1;
+            const dodgeEffect = Math.random() * myUser.character.dex;
+            const dodgeChance = dodgeEffect / 10;
+            let damageEffect = Math.floor(bossAttackValue * (1 - dodgeChance));
 
       // Spreads the myUser object (which has: {
       // myID: value,
@@ -112,7 +113,6 @@ export default function BossOne({ myCharacter, myUser, setMyUser, currentStep, s
         ]);
       }
     }
-  }
 
   return (
     <div id="bossfightcontainer">

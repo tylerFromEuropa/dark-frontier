@@ -54,24 +54,12 @@
   background-image: url(background_doctor.webp);
 }
 
+.background_bar {
+  background-image: url(background_bar.webp);
+}
+
 .background > p {
   background-color: #000000b6;
   padding: 20px 20px;
   width: 80%;
-}
-
-.selections {
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  height: 100vh;
-  background-color: var(--black);
-  background-color: #121212;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
 }

@@ -1,9 +1,12 @@
 [
   {
-    "story": ["You are thirsty...", "Look around the lifepod ship for some water"],
+    "story": [
+      "After your ship was robbed by pirates, you crash landed on the strange planet Nuccunus! When you wake up, you are very thirsty...",
+      "Look around the lifepod ship for some water"
+    ],
     "waterPathTrue": [
       "You find your trusty water flask, you remove the cap and drink like never before, you quench your thirst.",
-      "You drink from the bottle, you quench your thirst. You feel invigorated. You take a minute to rest and then you begin walking towards the village...",
+      " You feel invigorated. You take a minute to rest and then you begin walking towards the village...",
       "You approach the village gates, two Nuccunulan guards stand on either side of the door. The guard on the left stops you as you get closer and yells in a language unknown to you...",
       "Carefully choose your option"
     ],
@@ -13,7 +16,8 @@
       "You take some deep breaths and gather your bearings and remember that you survived the crash! This gives you a bit of motivational boost.You start to walk in the direction of the village you spotted earlier.",
       "After a long trek through the harsh landscape of this region on Nuccunus...",
       "You approach the village gates, two Nuccunulan guards stand on either side of the door. The guard on the left stops you as you get closer and yells in a language unknown to you...",
-      "You begin to feel dizzy and the world spins around you... You collapse on the ground like a sack of potatoes... You then wake up at the local clinic with an elderly doctor sporting a long white curly mustache grinning at you.",
+      "You begin to feel dizzy and the world spins around you...You collapse on the ground like a sack of potatoes...",
+      "You wake up at the local clinic with an handsome doctor sporting a sexy mustache grinning at you.",
       "Carefully choose your option!"
     ],
     "guardExplain": [
@@ -37,7 +41,7 @@
       "LOAD BAR"
     ],
     "doctorPanic": [
-      "The doctor begins to explain in a tongue you understand that you collapsed of dehydration. He knows about your spaceship crashing and about some pirates that recently came by. He tells you to head to the local bar and ask for “Skyhawk”.",
+      "As you rip off the cables and devices that were attached to various of your orifices, the doctor begins to explain in a tongue you understand that you collapsed of dehydration. He knows about your spaceship crashing and about some pirates that recently came by. He tells you to head to the local bar and ask for “Skyhawk”.",
       "You arrive at the bar, populated with all sorts of creatures and aliens. Some drinking, some fighting... You make your way to the bartender.",
       "LOAD BAR"
     ]

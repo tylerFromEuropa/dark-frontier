@@ -22,8 +22,36 @@
   background-size: 100% 100%;
 }
 
-.BGcrashsite {
+.background_crash {
+  background-image: url(background_crash.jpg);
+}
+
+.background_ship {
   background-image: url(background_ship.webp);
+}
+
+.background_bottle {
+  background-image: url(background_bottle.webp);
+}
+
+.background_bottlecracked {
+  background-image: url(background_bottlecracked.webp);
+}
+
+.background_gates {
+  background-image: url(background_gates.webp);
+}
+
+.background_guns {
+  background-image: url(background_guns.webp);
+}
+
+.background_gatesblur {
+  background-image: url(background_gatesblur.webp);
+}
+
+.background_doctor {
+  background-image: url(background_doctor.webp);
 }
 
 .background > p {

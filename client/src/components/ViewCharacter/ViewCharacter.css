@@ -1,0 +1,47 @@
+.view-character {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.character-sheet {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  width: 50%;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.character-section {
+  width: 50%;
+}
+
+.character-section p {
+  font-size: 1.5rem;
+}
+.skills {
+  width: 50%;
+}
+.skill-level {
+  font-size: 2.5rem;
+}
+
+.skill-number {
+  color: var(--yellow);
+}
+
+#characterName {
+  border: none;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: var(--yellow);
+}
+
+.character-img {
+  max-height: 10vh;
+}

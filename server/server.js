@@ -11,21 +11,6 @@ const Users = require("./models/user");
 
 mongoose.connect(process.env.MONGODB_LINK);
 
-app.use((req, res, next) => {
-  const allowedOrigins = [
-    "http://localhost:5173",
-    "https://dark-frontier.vercel.app",
-  ];
-  const origin = req.headers.origin;
-
-  if (allowedOrigins.includes(origin)) {
-    res.setHeader("Access-Control-Allow-Origin", origin);
-  }
-
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-  next();
-});
-
 app.get("/", (_, response) => {
   response.json("These are not the GETs you're looking for.");
 });
@@ -43,19 +28,12 @@ app.post("/users", async (request, response) => {
 app.put("/users/:id", async (request, response) => {
   // We use the function findOneAndUpdate which makes the myID = whatever param we used (which is the big number) and sets it as the request body to then update the database
   // The { new: true } part simply uses the new data instead of the old data
-  const updatedUser = await Users.findOneAndUpdate(
-    { myID: request.params.id },
-    request.body,
-    { new: true }
-  );
+  const updatedUser = await Users.findOneAndUpdate({ myID: request.params.id }, request.body, { new: true });
   response.json(updatedUser);
 });
 
 app.delete("/users/:id", async (request, response) => {
-  const deletedUser = await Users.findOneAndDelete(
-    { myID: request.params.id },
-    { new: true }
-  );
+  const deletedUser = await Users.findOneAndDelete({ myID: request.params.id }, { new: true });
   response.json(deletedUser);
 });
 

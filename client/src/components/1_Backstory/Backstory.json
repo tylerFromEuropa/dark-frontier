@@ -22,28 +22,23 @@
     ],
     "guardExplain": [
       "The guards somehow understood what you meant, and perhaps they heard a boom in the distance... They let you in! On the way in they do drinking motions with their 3rd hands.",
-      "You arrive at the bar, populated with all sorts of creatures and aliens. Some drinking, some fighting... You make your way to the bartender.",
-      "LOAD BAR"
+      "You arrive at the bar, populated with all sorts of creatures and aliens. Some drinking, some fighting... You make your way to the bartender."
     ],
     "guardFingerGuns": [
       "They see you mimic a criminal and a victim, despite your awful acting attempts, they understand you. They let you in. On the way in they do drinking motions with their 3rd hand.",
-      "You arrive at the bar, populated with all sorts of creatures and aliens. Some drinking, some fighting... You make your way to the bartender.",
-      "LOAD BAR"
+      "You arrive at the bar, populated with all sorts of creatures and aliens. Some drinking, some fighting... You make your way to the bartender."
     ],
     "guardYell": [
       "They are confused by what you are saying, as they do not speak your tongue. One of the guards take some coins out of his pocket and points to the door. He is saying you need to pay for entry. You lose some coins",
-      "You arrive at the bar, populated with all sorts of creatures and aliens. Some drinking, some fighting... You make your way to the bartender.",
-      "LOAD BAR"
+      "You arrive at the bar, populated with all sorts of creatures and aliens. Some drinking, some fighting... You make your way to the bartender."
     ],
     "doctorQuestion": [
       "The doctor begins to explain in a tongue you understand that you collapsed of dehydration. He knows about your spaceship crashing and about some pirates that recently came by. He tells you to head to the local bar and ask for “Skyhawk”.",
-      "You arrive at the bar, populated with all sorts of creatures and aliens. Some drinking, some fighting... You make your way to the bartender.",
-      "LOAD BAR"
+      "You arrive at the bar, populated with all sorts of creatures and aliens. Some drinking, some fighting... You make your way to the bartender."
     ],
     "doctorPanic": [
       "As you rip off the cables and devices that were attached to various of your orifices, the doctor begins to explain in a tongue you understand that you collapsed of dehydration. He knows about your spaceship crashing and about some pirates that recently came by. He tells you to head to the local bar and ask for “Skyhawk”.",
-      "You arrive at the bar, populated with all sorts of creatures and aliens. Some drinking, some fighting... You make your way to the bartender.",
-      "LOAD BAR"
+      "You arrive at the bar, populated with all sorts of creatures and aliens. Some drinking, some fighting... You make your way to the bartender."
     ]
   }
 ]

@@ -4,8 +4,7 @@
     "orderDrink": ["", "The bartender brings you the drink that you requested. They ask what business brings you to this place?"],
     "askPirates": [
       "",
-      "The bartender squints their eyes and looks taken aback. “There are no pirates around... Unless... See that guy over there?” - The bartender points to an individual. “Skyhawk”. The bartender looks at you after. “She may know more about it.”",
-      "LOAD SKYHAWK"
+      "The bartender squints their eyes and looks taken aback. “There are no pirates around... Unless... See that guy over there?” - The bartender points to an individual. “Skyhawk”. The bartender looks at you after. “She may know more about it.”"
     ],
     "bartenderNumber": ["", "The bartender grunts and changes demeanor from friendly to irate. You should not have asked that..."]
   }

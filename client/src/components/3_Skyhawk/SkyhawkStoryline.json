@@ -5,12 +5,10 @@
       "Carefully choose your option!"
     ],
     "introduced": [
-      "Skyhawk stares at you as you introduce yourself, sparing the occasional nod to acknowledge your words. She informs you that any information you want comes at a cost. You lose 4 coins!",
-      "LOAD FINALE"
+      "Skyhawk stares at you as you introduce yourself, sparing the occasional nod to acknowledge your words. She informs you that any information you want comes at a cost. You lose 4 coins!"
     ],
     "demanded": [
-      "Skyhawk grunts in your direction and tells you that nothing is free in this world. She tells you to dial it back and that information costs you. You lose 8 coins!",
-      "LOAD FINALE"
+      "Skyhawk grunts in your direction and tells you that nothing is free in this world. She tells you to dial it back and that information costs you. You lose 8 coins!"
     ],
     "joked": ["That was a good joke, now... What do you want?"]
   }

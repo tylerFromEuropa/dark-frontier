@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./3_Skyhawk.css";
 import storyline from "./SkyhawkStoryline.json";
 
-export default function $2_Skyhawk({ myUser, setMyUser }) {
+export default function $2_Skyhawk({ setCurrentStep, currentStep, myUser, setMyUser }) {
   const [storyChoice, setStoryChoice] = useState(0);
   const [specificChoice, setSpecificChoice] = useState(0);
   const [optionCheck, setOptionCheck] = useState(false);
@@ -27,6 +27,8 @@ export default function $2_Skyhawk({ myUser, setMyUser }) {
     } else if (storyChoice === 0 && storyPath === "joked") {
       setOptionCheck(true);
       setSpecificChoice(2);
+    } else if ((storyPath === "introduced" && storyChoice == 1) || (storyPath === "demanded" && storyChoice === 1)) {
+      setCurrentStep(4);
     } else {
       setOptionCheck(false);
       setSpecificChoice(0);

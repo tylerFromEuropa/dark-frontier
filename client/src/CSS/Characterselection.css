@@ -8,7 +8,7 @@
     max-height: 85%;
 }
 
-h2 {
+#adv-select {
     color: var(--yellow);
     font-size: 2rem;
     margin-bottom: 1rem;

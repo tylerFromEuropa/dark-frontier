@@ -2,12 +2,19 @@ import { useEffect, useState } from "react";
 import "./6_Dunecrest.css";
 import storyline from "../Storyline/Storyline.json";
 
-export default function $6_Dunecrest({ setCurrentStep, currentStep, myUser, setMyUser }) {
+export default function $6_Dunecrest({
+  setCurrentStep,
+  currentStep,
+  myUser,
+  setMyUser,
+}) {
   const [storyChoice, setStoryChoice] = useState(0);
   const [specificChoice, setSpecificChoice] = useState(0);
   const [optionCheck, setOptionCheck] = useState(false);
   const [storyPath, setStoryPath] = useState("story");
-  const [backgroundImageClass, setBackgroundImageClass] = useState("background background_town");
+  const [backgroundImageClass, setBackgroundImageClass] = useState(
+    "background background_town"
+  );
 
   const [pathArray, setPathArray] = useState({
     spareLife: false,
@@ -21,7 +28,14 @@ export default function $6_Dunecrest({ setCurrentStep, currentStep, myUser, setM
   }, [storyChoice]);
 
   function changeBackground() {
-    console.log(`storyPath:`, storyPath, `storyChoice:`, storyChoice, `backgroundImageClass:`, backgroundImageClass);
+    console.log(
+      `storyPath:`,
+      storyPath,
+      `storyChoice:`,
+      storyChoice,
+      `backgroundImageClass:`,
+      backgroundImageClass
+    );
     if (storyPath === "story" && storyChoice === 0) {
       setBackgroundImageClass("background background_town");
     } else if (storyPath === "story" && storyChoice === 1) {
@@ -69,7 +83,9 @@ export default function $6_Dunecrest({ setCurrentStep, currentStep, myUser, setM
     <section className="dunecrest-page">
       <section className={backgroundImageClass}>
         <img src="" alt="" />
-        <p>{storyline[0].Dunecrest[0][storyPath][storyChoice]}</p>
+        <p id="dunecrest_text">
+          {storyline[0].Dunecrest[0][storyPath][storyChoice]}
+        </p>
       </section>
       <section className="selections">
         {!optionCheck && (

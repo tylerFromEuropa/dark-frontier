@@ -59,3 +59,8 @@
   justify-content: center;
   align-items: center;
 }
+
+#dunecrest_text {
+  position: absolute;
+  bottom: 20%;
+}

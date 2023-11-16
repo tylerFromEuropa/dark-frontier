@@ -26,10 +26,8 @@
   background-image: url(background_city.webp);
 }
 
-.background > p {
-  background-color: #000000b6;
-  padding: 20px 20px;
-  width: 80%;
+#placevisittext {
+  bottom: 0vh;
 }
 
 .selections {

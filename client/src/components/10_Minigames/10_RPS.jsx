@@ -3,7 +3,7 @@ import "./10_RPS.css";
 import guardsBG from "./guards.png";
 
 export default function $10_RPS({ setCurrentStep, myUser, setMyUser }) {
-  const choices = ["rock", "paper", "scissors"];
+  const choices = ["Meteor", "Spacekarate Chop", "Laserscissors"];
   const [userChoice, setUserChoice] = useState(null);
   const [computerChoice, setComputerChoice] = useState(null);
   const [result, setResult] = useState(null);
@@ -34,9 +34,9 @@ export default function $10_RPS({ setCurrentStep, myUser, setMyUser }) {
     if (user === computer) {
       setResult("It's a tie!");
     } else if (
-      (user === "rock" && computer === "scissors") ||
-      (user === "paper" && computer === "rock") ||
-      (user === "scissors" && computer === "paper")
+      (user === "Meteor" && computer === "Laserscissors") ||
+      (user === "Spacekarate Chop" && computer === "Meteor") ||
+      (user === "Laserscissors" && computer === "Spacekarate Chop")
     ) {
       setResult("You win!");
     } else {
@@ -57,14 +57,20 @@ export default function $10_RPS({ setCurrentStep, myUser, setMyUser }) {
         </div>
       </div>
       <div>
-        <button className="rps-btn" onClick={() => handleUserChoice("rock")}>
-          Rock
+        <button className="rps-btn" onClick={() => handleUserChoice("Meteor")}>
+          Meteor
         </button>
-        <button className="rps-btn" onClick={() => handleUserChoice("paper")}>
-          Paper
+        <button
+          className="rps-btn"
+          onClick={() => handleUserChoice("Spacekarate Chop")}
+        >
+          Spacekarate Chop
         </button>
-        <button className="rps-btn" onClick={() => handleUserChoice("scissors")}>
-          Scissors
+        <button
+          className="rps-btn"
+          onClick={() => handleUserChoice("Laserscissors")}
+        >
+          Laserscissors
         </button>
         <h2 className="result">{result}</h2>
       </div>

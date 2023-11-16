@@ -2,12 +2,19 @@ import { useEffect, useState } from "react";
 import "./4_PlaceVisit.css";
 import storyline from "../Storyline/Storyline.json";
 
-export default function $4_PlaceVisit({ setCurrentStep, currentStep, myUser, setMyUser }) {
+export default function $4_PlaceVisit({
+  setCurrentStep,
+  currentStep,
+  myUser,
+  setMyUser,
+}) {
   const [storyChoice, setStoryChoice] = useState(0);
   const [specificChoice, setSpecificChoice] = useState(0);
   const [optionCheck, setOptionCheck] = useState(false);
   const [storyPath, setStoryPath] = useState("story");
-  const [backgroundImageClass, setBackgroundImageClass] = useState("background background_city");
+  const [backgroundImageClass, setBackgroundImageClass] = useState(
+    "background background_city"
+  );
 
   const [pathArray, setPathArray] = useState({
     pawnShop: false,
@@ -43,7 +50,9 @@ export default function $4_PlaceVisit({ setCurrentStep, currentStep, myUser, set
     <section className="placeVisit-page">
       <section className={backgroundImageClass}>
         <img src="" alt="" />
-        <p>{storyline[0].PlaceVisit[0][storyPath][storyChoice]}</p>
+        <p id="placevisittext">
+          {storyline[0].PlaceVisit[0][storyPath][storyChoice]}
+        </p>
       </section>
       <section className="selections">
         {!optionCheck && (
@@ -51,7 +60,8 @@ export default function $4_PlaceVisit({ setCurrentStep, currentStep, myUser, set
             <button
               className="useroption"
               onClick={() => {
-                setStoryChoice(storyChoice + 1), setBackgroundImageClass("background skyhawkBG");
+                setStoryChoice(storyChoice + 1),
+                  setBackgroundImageClass("background skyhawkBG");
               }}
             >
               Continue

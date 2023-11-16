@@ -50,13 +50,19 @@ export default function $10_RPS({ setCurrentStep, myUser }) {
                 </div>
             </div>
             <div>
-                <button onClick={() => handleUserChoice("rock")}>Rock</button>
-                <button onClick={() => handleUserChoice("paper")}>Paper</button>
-                <button onClick={() => handleUserChoice("scissors")}>Scissors</button>
+                <button className="rps-btn" onClick={() => handleUserChoice("rock")}>
+                    Rock
+                </button>
+                <button className="rps-btn" onClick={() => handleUserChoice("paper")}>
+                    Paper
+                </button>
+                <button className="rps-btn" onClick={() => handleUserChoice("scissors")}>
+                    Scissors
+                </button>
                 <h2 className="result">{result}</h2>
             </div>
             <div>
-                <h1>GUARDS</h1>
+                <h1>Guards</h1>
                 <img className="guards-image" src={guardsBG} alt="" />
 
                 <h3>Computer's choice:</h3>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./10_RPS.css";
-import guardsBG from "./background_gates.webp";
+import guardsBG from "./guards.png";
 
 export default function $10_RPS({ setCurrentStep, myUser, setMyUser }) {
   const choices = ["rock", "paper", "scissors"];
@@ -33,7 +33,11 @@ export default function $10_RPS({ setCurrentStep, myUser, setMyUser }) {
   const determineWinner = (user, computer) => {
     if (user === computer) {
       setResult("It's a tie!");
-    } else if ((user === "rock" && computer === "scissors") || (user === "paper" && computer === "rock") || (user === "scissors" && computer === "paper")) {
+    } else if (
+      (user === "rock" && computer === "scissors") ||
+      (user === "paper" && computer === "rock") ||
+      (user === "scissors" && computer === "paper")
+    ) {
       setResult("You win!");
     } else {
       setResult("Guard wins!");
@@ -59,7 +63,10 @@ export default function $10_RPS({ setCurrentStep, myUser, setMyUser }) {
         <button className="rps-btn" onClick={() => handleUserChoice("paper")}>
           Paper
         </button>
-        <button className="rps-btn" onClick={() => handleUserChoice("scissors")}>
+        <button
+          className="rps-btn"
+          onClick={() => handleUserChoice("scissors")}
+        >
           Scissors
         </button>
         <h2 className="result">{result}</h2>

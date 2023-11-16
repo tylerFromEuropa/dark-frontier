@@ -1,0 +1,38 @@
+.card-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.cards img {
+  margin: 20px;
+}
+
+.options p {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem;
+}
+
+.options button {
+  width: 20vw;
+  padding: 20px 50px;
+  background-color: var(--yellow);
+  border: 1px solid var(--yellow);
+  color: var(--black);
+  margin-bottom: 20px;
+  text-align: center;
+  transition: 125ms;
+  font-weight: 600;
+  font-family: var(--font);
+  font-size: 1.2rem;
+}
+
+.options button:hover {
+  background-color: var(--black);
+  border: 1px solid var(--yellow);
+  color: var(--yellow);
+  cursor: crosshair;
+}

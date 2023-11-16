@@ -5,6 +5,8 @@
       "You ask the clerk about it and inform him that is in fact yours but it is stolen... The clerk lazily glances at the steering wheel behind him then back at you. He informs you that this is now his property and if you want it, you have to buy it.",
       "Choose Carefully"
     ],
-    "buyWheel": ["Choose Carefully"]
+    "buyWheel": [
+      "You've got your steering wheel back, whoop whoop! You suspect that it might help with steering your spaceship away from this darn planet."
+    ]
   }
 ]

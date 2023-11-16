@@ -25,7 +25,16 @@ export default function $5_PawnShop({
 
   useEffect(() => {
     checkingStory();
+    changeBackground();
   }, [storyChoice]);
+
+  function changeBackground() {
+    console.log("1");
+    if (storyPath === "buyWheel") {
+      setBackgroundImageClass("background background_steeringwheel");
+      console.log("2");
+    }
+  }
 
   // Checking storychoice and if it is an option we change the optionCheck to true else it stays false
   function checkingStory() {

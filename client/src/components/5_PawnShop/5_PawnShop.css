@@ -26,6 +26,10 @@
   background-image: url(background_pawnshop.webp);
 }
 
+.background_steeringwheel {
+  background-image: url(background_steeringwheel.webp);
+}
+
 .background > p {
   background-color: #000000b6;
   padding: 20px 20px;

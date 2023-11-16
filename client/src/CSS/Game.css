@@ -46,11 +46,13 @@ body {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .background > p {
   font-size: 1.5rem;
+  position: relative;
+  bottom: -30vh;
 }
 
 .useroption {

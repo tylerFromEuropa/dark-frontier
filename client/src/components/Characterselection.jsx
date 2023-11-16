@@ -20,8 +20,8 @@ export default function Characterselection({ myUser, setMyUser, myCharacter, set
     const newUser = {
       myID: ranNum,
       userID: user.email,
-      character: Characters[myCharacter],
       qq: 150,
+      character: Characters[myCharacter],
     };
     setMyUser(newUser);
     if (!userData || Object.keys(userData).length === 0) {

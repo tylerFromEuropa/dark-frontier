@@ -1,8 +1,27 @@
+.background {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  height: 100vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.background_cardgame {
+  background-image: url(background_cardgame.webp);
+}
+
 .card-game {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   gap: 50px;
 }
 

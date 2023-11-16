@@ -15,6 +15,10 @@ export default function $10_CardGame({ setCurrentStep, setMyUser, myUser }) {
 
   const [result, setResult] = useState("");
 
+  const [backgroundImageClass, setBackgroundImageClass] = useState(
+    "background background_cardgame"
+  );
+
   useEffect(() => {
     getCardDeck();
   }, []);
@@ -76,7 +80,7 @@ export default function $10_CardGame({ setCurrentStep, setMyUser, myUser }) {
   }
 
   return (
-    <section className="card-game">
+    <section className={`card-game ${backgroundImageClass}`}>
       <div className="cards">
         {!dealerCard ? (
           <img src="https://www.deckofcardsapi.com/static/img/back.png" />
@@ -104,7 +108,6 @@ export default function $10_CardGame({ setCurrentStep, setMyUser, myUser }) {
         {userCardButton && <button onClick={getUserCard}>Reveal Your Card</button>}
         {dealerCard && userCard && <button onClick={checkResult}>Check Result</button>}
       </div>
-      {<p>{result}</p>}
     </section>
   );
 }

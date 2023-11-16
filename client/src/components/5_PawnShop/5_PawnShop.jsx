@@ -46,6 +46,7 @@ export default function $5_PawnShop({ setCurrentStep, currentStep, myUser, setMy
         setPathArray({ ...pathArray, buyWheel: true });
         setStoryPath("buyWheel");
         setStoryChoice(0);
+        setMyUser({ ...myUser, QQ: myUser.QQ - 100 });
       } else if (optionNum === 2) {
         setCurrentStep(4);
       }

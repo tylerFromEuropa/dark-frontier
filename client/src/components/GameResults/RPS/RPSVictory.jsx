@@ -1,4 +1,4 @@
-import "../CSS/Gameresults.css";
+import "../../../CSS/Gameresults.css";
 
 export default function RPSVictory({ myUser, setMyUser, setCurrentStep }) {
   return (

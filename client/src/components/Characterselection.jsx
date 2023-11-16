@@ -21,7 +21,7 @@ export default function Characterselection({ myUser, setMyUser, myCharacter, set
       myID: ranNum,
       userID: user.email,
       character: Characters[myCharacter],
-      QQ: 150,
+      qq: 150,
     };
     setMyUser(newUser);
     if (!userData || Object.keys(userData).length === 0) {

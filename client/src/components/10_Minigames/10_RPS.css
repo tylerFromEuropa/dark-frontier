@@ -29,11 +29,31 @@
     justify-content: center;
     align-items: center;
 }
+
+.guard-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 70px;
+}
+
+.guard-info {
+    order: 2;
+}
+
+.guard-info-container h3 {
+    order: 1;
+    padding-right: 10px;
+}
+
 .character-choice {
     width: 125px;
 }
 .userChoice {
     color: var(--white);
+    text-transform: capitalize;
+    padding-top: 15px;
+    font-size: 1.2rem;
 }
 
 .rps-btn {
@@ -55,4 +75,19 @@
     border: 1px solid var(--yellow);
     color: var(--yellow);
     cursor: pointer;
+}
+
+.rps-char-title {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.rps-choice-text {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.result {
+    margin-top: 50px;
+    font-size: 1.2rem;
 }

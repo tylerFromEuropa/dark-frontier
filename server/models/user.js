@@ -5,6 +5,7 @@ const { Schema } = mongoose;
 const userSchema = new Schema({
   myID: Number,
   userID: String,
+  QQ: Number,
   character: Object,
 });
 

@@ -20,6 +20,7 @@ export default function Characterselection({ myUser, setMyUser, myCharacter, set
     const newUser = {
       myID: ranNum,
       userID: user.email,
+      QQ: 150,
       character: Characters[myCharacter],
     };
     setMyUser(newUser);

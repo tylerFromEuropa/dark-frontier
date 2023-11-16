@@ -54,35 +54,27 @@ export default function $10_CardGame({ setCurrentStep }) {
   function checkResult() {
     if (dealerCard.cards[0].value > userCard.cards[0].value && userGuess === "higher") {
       setResult("lose");
-      setCurrentStep(11);
+      setCurrentStep(3);
     } else if (dealerCard.cards[0].value > userCard.cards[0].value && userGuess === "lower") {
       setResult("win");
       setCurrentStep(96);
     } else if (dealerCard.cards[0].value < userCard.cards[0].value && userGuess === "lower") {
       setResult("lose");
-      setCurrentStep(11);
+      setCurrentStep(3);
     } else if (dealerCard.cards[0].value < userCard.cards[0].value && userGuess === "higher") {
       setResult("win");
       setCurrentStep(96);
     } else {
       setResult("tie");
-      setCurrentStep(11);
+      setCurrentStep(3);
     }
   }
 
   return (
     <section className="card-game">
       <div className="cards">
-        {!dealerCard ? (
-          <img src="https://www.deckofcardsapi.com/static/img/back.png" />
-        ) : (
-          <img src={dealerCard.cards[0].image} />
-        )}
-        {!userCard ? (
-          <img src="https://www.deckofcardsapi.com/static/img/back.png" />
-        ) : (
-          <img src={userCard.cards[0].image} />
-        )}
+        {!dealerCard ? <img src="https://www.deckofcardsapi.com/static/img/back.png" /> : <img src={dealerCard.cards[0].image} />}
+        {!userCard ? <img src="https://www.deckofcardsapi.com/static/img/back.png" /> : <img src={userCard.cards[0].image} />}
       </div>
 
       <div className="options">

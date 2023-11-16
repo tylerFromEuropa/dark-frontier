@@ -1,20 +1,13 @@
 import { useEffect, useState } from "react";
 import "./7_Spaceship.css";
-import storyline from "./SpaceshipStoryLine.json";
+import storyline from "../Storyline/Storyline.json";
 
-export default function $7_Spaceship({
-  setCurrentStep,
-  currentStep,
-  myUser,
-  setMyUser,
-}) {
+export default function $7_Spaceship({ setCurrentStep, currentStep, myUser, setMyUser }) {
   const [storyChoice, setStoryChoice] = useState(0);
   const [specificChoice, setSpecificChoice] = useState(0);
   const [optionCheck, setOptionCheck] = useState(false);
   const [storyPath, setStoryPath] = useState("story");
-  const [backgroundImageClass, setBackgroundImageClass] = useState(
-    "background background_ship"
-  );
+  const [backgroundImageClass, setBackgroundImageClass] = useState("background background_ship");
 
   const [pathArray, setPathArray] = useState({
     spareLife: false,
@@ -48,7 +41,7 @@ export default function $7_Spaceship({
     <section className="dunecrest-page">
       <section className={backgroundImageClass}>
         <img src="" alt="" />
-        <p>{storyline[0][storyPath][storyChoice]}</p>
+        <p>{storyline[0].Spaceship[0][storyPath][storyChoice]}</p>
       </section>
       <section className="selections">
         {!optionCheck && (
@@ -56,8 +49,7 @@ export default function $7_Spaceship({
             <button
               className="useroption"
               onClick={() => {
-                setStoryChoice(storyChoice + 1),
-                  setBackgroundImageClass("background skyhawkBG");
+                setStoryChoice(storyChoice + 1), setBackgroundImageClass("background skyhawkBG");
               }}
             >
               Continue

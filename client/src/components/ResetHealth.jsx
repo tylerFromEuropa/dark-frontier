@@ -22,7 +22,7 @@ export default function ResetHealth({ myUser, setMyUser, setCurrentStep }) {
     <>
       <div>
         <button
-          class="resethealthbutton"
+          className="resethealthbutton"
           onClick={() => {
             resetHealth();
           }}

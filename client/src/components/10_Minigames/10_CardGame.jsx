@@ -55,7 +55,7 @@ export default function $10_CardGame({ setCurrentStep, setMyUser, myUser }) {
     if (dealerCard.cards[0].value > userCard.cards[0].value && userGuess === "higher") {
       setResult("lose");
       setMyUser({ ...myUser, QQ: myUser.QQ - 15 });
-      setCurrentStep(3);
+      setCurrentStep(95);
     } else if (dealerCard.cards[0].value > userCard.cards[0].value && userGuess === "lower") {
       setResult("win");
       setMyUser({ ...myUser, QQ: myUser.QQ + 50 });
@@ -63,22 +63,30 @@ export default function $10_CardGame({ setCurrentStep, setMyUser, myUser }) {
     } else if (dealerCard.cards[0].value < userCard.cards[0].value && userGuess === "lower") {
       setResult("lose");
       setMyUser({ ...myUser, QQ: myUser.QQ - 15 });
-      setCurrentStep(3);
+      setCurrentStep(95);
     } else if (dealerCard.cards[0].value < userCard.cards[0].value && userGuess === "higher") {
       setResult("win");
       setMyUser({ ...myUser, QQ: myUser.QQ + 50 });
       setCurrentStep(96);
     } else {
       setResult("tie");
-      setCurrentStep(3);
+      setCurrentStep(94);
     }
   }
 
   return (
     <section className="card-game">
       <div className="cards">
-        {!dealerCard ? <img src="https://www.deckofcardsapi.com/static/img/back.png" /> : <img src={dealerCard.cards[0].image} />}
-        {!userCard ? <img src="https://www.deckofcardsapi.com/static/img/back.png" /> : <img src={userCard.cards[0].image} />}
+        {!dealerCard ? (
+          <img src="https://www.deckofcardsapi.com/static/img/back.png" />
+        ) : (
+          <img src={dealerCard.cards[0].image} />
+        )}
+        {!userCard ? (
+          <img src="https://www.deckofcardsapi.com/static/img/back.png" />
+        ) : (
+          <img src={userCard.cards[0].image} />
+        )}
       </div>
 
       <div className="options">
@@ -92,9 +100,8 @@ export default function $10_CardGame({ setCurrentStep, setMyUser, myUser }) {
 
         {!dealerCard && <button onClick={getDealerCard}>Start</button>}
 
-        {userCardButton && <button onClick={getUserCard}>Reveal Dealer's Card</button>}
-
-        {dealerCard && userCard && <button onClick={checkResult}>check result</button>}
+        {userCardButton && <button onClick={getUserCard}>Reveal Your Card</button>}
+        {dealerCard && userCard && <button onClick={checkResult}>Check Result</button>}
       </div>
       {<p>{result}</p>}
     </section>

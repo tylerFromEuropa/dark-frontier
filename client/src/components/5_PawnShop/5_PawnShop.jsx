@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./5_PawnShop.css";
-import storyline from "./PawnShopStoryLine.json";
+import storyline from "../Storyline/Storyline.json";
 
 export default function $5_PawnShop({ setCurrentStep, currentStep, myUser, setMyUser }) {
   const [storyChoice, setStoryChoice] = useState(0);
@@ -56,7 +56,7 @@ export default function $5_PawnShop({ setCurrentStep, currentStep, myUser, setMy
   return (
     <section className="pawnShop-page">
       <section className={backgroundImageClass}>
-        <p>{storyline[0][storyPath][storyChoice]}</p>
+        <p>{storyline[0].PawnShop[0][storyPath][storyChoice]}</p>
       </section>
       <section className="selections">
         {!optionCheck && (

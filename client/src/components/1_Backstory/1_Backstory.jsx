@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./1_Backstory.css";
-import storyline from "./Backstory.json";
+import storyline from "../Storyline/Storyline.json";
 
 export default function $1_Backstory({ myUser, setMyUser, setCurrentStep, currentStep }) {
   const [storyChoice, setStoryChoice] = useState(0);
@@ -130,7 +130,7 @@ export default function $1_Backstory({ myUser, setMyUser, setCurrentStep, curren
     <section className="backstory-page">
       <section className={backgroundImageClass}>
         <img src="" alt="" />
-        <p>{storyline[0][storyPath][storyChoice]}</p>
+        <p>{storyline[0].Backstory[0][storyPath][storyChoice]}</p>
       </section>
       <section className="selections">
         {!optionCheck && (

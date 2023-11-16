@@ -1,0 +1,110 @@
+[
+  {
+    "Backstory": [
+      {
+        "story": [
+          "After your ship was robbed by pirates, you crash landed on the strange planet Nuccunus! When you wake up, you are very thirsty...",
+          "Look around the lifepod ship for some water"
+        ],
+        "waterPathTrue": [
+          "You find your trusty water flask, you remove the cap and drink like never before, you quench your thirst.",
+          " You feel invigorated. You take a minute to rest and then you begin walking towards the village...",
+          "You approach the village gates, two Nuccunulan guards stand on either side of the door. The guard on the left stops you as you get closer and yells in a language unknown to you...",
+          "Carefully choose your option"
+        ],
+        "waterPathFalse": [
+          "You find a flask, unfortunately it is damaged and all the water leaked.",
+          "You feel parched, a groan comes out as you try and think of the next steps.",
+          "You take some deep breaths and gather your bearings and remember that you survived the crash! This gives you a bit of motivational boost.You start to walk in the direction of the village you spotted earlier.",
+          "After a long trek through the harsh landscape of this region on Nuccunus...",
+          "You approach the village gates, two Nuccunulan guards stand on either side of the door. The guard on the left stops you as you get closer and yells in a language unknown to you...",
+          "You begin to feel dizzy and the world spins around you...You collapse on the ground like a sack of potatoes...",
+          "You wake up at the local clinic with an handsome doctor sporting a sexy mustache grinning at you.",
+          "Carefully choose your option!"
+        ],
+        "guardExplain": [
+          "The guards somehow understood what you meant, and perhaps they heard a boom in the distance... They let you in! On the way in they do drinking motions with their 3rd hands."
+        ],
+        "guardFingerGuns": [
+          "They see you mimic a criminal and a victim, despite your awful acting attempts, they understand you. They let you in. On the way in they do drinking motions with their 3rd hand."
+        ],
+        "guardYell": [
+          "They are confused by what you are saying, as they do not speak your tongue. One of the guards take some coins out of his pocket and points to the door. He is saying you need to pay for entry. You lose some coins"
+        ],
+        "doctorQuestion": [
+          "The doctor begins to explain in a tongue you understand that you collapsed of dehydration. He knows about your spaceship crashing and about some pirates that recently came by. He tells you to head to the local bar and ask for “Skyhawk”."
+        ],
+        "doctorPanic": [
+          "As you rip off the cables and devices that were attached to various of your orifices, the doctor begins to explain in a tongue you understand that you collapsed of dehydration. He knows about your spaceship crashing and about some pirates that recently came by. He tells you to head to the local bar and ask for “Skyhawk”."
+        ]
+      }
+    ],
+    "Bar": [
+      {
+        "hub": [
+          "You arrive at the bar, populated with all sorts of creatures and aliens. Some drinking, some fighting... You make your way to the bartender.",
+          "Make Your Choice!"
+        ],
+        "orderDrink": ["The bartender brings you the drink that you requested. They ask what business brings you to this place?"],
+        "askPirates": [
+          "The bartender squints their eyes and looks taken aback. “There are no pirates around... Unless... See that guy over there?” - The bartender points to an individual. “Skyhawk”. The bartender looks at you after. “She may know more about it.”"
+        ],
+        "bartenderNumber": ["The bartender grunts and changes demeanor from friendly to irate. You should not have asked that..."]
+      }
+    ],
+    "Skyhawk": [
+      {
+        "story": [
+          "You approach Skyhawk, a humanoid mercenary who ended up on Nuccunus a long time ago. She's the type to know everything about everyone's business... Funny how that works, eh? She spares you a glance as you get closer. You feel a bit terrified by the glance.",
+          "Carefully choose your option!"
+        ],
+        "introduced": [
+          "Skyhawk stares at you as you introduce yourself, sparing the occasional nod to acknowledge your words. She informs you that any information you want comes at a cost. You lose 4 coins!"
+        ],
+        "demanded": [
+          "Skyhawk grunts in your direction and tells you that nothing is free in this world. She tells you to dial it back and that information costs you. You lose 8 coins!"
+        ],
+        "joked": ["That was a good joke, now... What do you want?"]
+      }
+    ],
+    "PlaceVisit": [
+      {
+        "story": [
+          "You receive information that the parts were stolen by a pirate captain named Celestial Scourge and his grunts. Scourge was last seen in this very bar boasting about a ship he hit, but he’s nowhere to be seen! Chatter around the bar suggests that he may have gone to the local pawn shop, or perhaps to a nearby village where pirates are welcomed."
+        ]
+      }
+    ],
+    "PawnShop": [
+      {
+        "story": [
+          "You arrive at the pawn shop and make your way to the counter to talk to the clerk. While engaged in conversation you spot your steering wheel on one of the shelves! You know it's yours cause it has the same bright red paint with scratches on the left side.",
+          "You ask the clerk about it and inform him that is in fact yours but it is stolen... The clerk lazily glances at the steering wheel behind him then back at you. He informs you that this is now his property and if you want it, you have to buy it.",
+          "Choose Carefully"
+        ],
+        "buyWheel": [
+          "You've got your steering wheel back, whoop whoop! You suspect that it might help with steering your spaceship away from this darn planet."
+        ]
+      }
+    ],
+    "Dunecrest": [
+      {
+        "story": [
+          "You arrive at Dunecrest, it appears to be a rundown village with dilapidating buildings and an overall bad vibe.",
+          "You make your way to the local (and only) bar where you encounter a bunch of individuals, all from bad walks of life, murderers, thieves, pirates... You name it.",
+          "You eventually make your way around the bar and find Captain Celestial Scourge, and you finally get a chance to confront him.",
+          "You have my wormhole garbler and Gravimetric Giggletron! Give them back to me, now!",
+          "Hahaha, you pathetic creature. It was so easy to take this from you! What makes you think I will give it back?",
+          "Choose Carefully"
+        ],
+        "spareLife": ["Give it back and I will spare your life!", "NEVER! FIGHT ME!"],
+        "attack": ["You messed with the wrong dude, Pirate! Prepare to die!", "BRING IT!"],
+        "blasting": ["WHAT THE..."]
+      }
+    ],
+    "Spaceship": [
+      {
+        "story": ["You arrive safely at your Spaceship!", "Choose Carefully"]
+      }
+    ]
+  }
+]

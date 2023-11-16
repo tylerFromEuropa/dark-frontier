@@ -20,7 +20,8 @@ export default function $10_CardGame({ setCurrentStep, setMyUser, myUser }) {
   }, []);
 
   async function getCardDeck() {
-    const API = "https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1";
+    const API =
+      "https://www.deckofcardsapi.com/api/deck/new/shuffle/?cards=1D,2D,3D,4D,5D,6D,7D,8D,9D,10D,1H,2H,3H,4H,5H,6H,7H,8H,9H,10H,1S,2S,3S,4S,5S,6S,7S,8S,9S,10S,1C,2C,3C,4C,5C,6C,7C,8C9C,10C";
     const res = await axios.get(API);
     setCardDeck(res.data);
   }

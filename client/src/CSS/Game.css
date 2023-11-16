@@ -3,86 +3,90 @@
 
 /* Variables */
 :root {
-    --font: "Chakra Petch";
-    --yellow: #ffe207;
-    --blue: #003f82;
-    --black: #1b1b1b;
-    --red: #a20000;
-    --white: #f3f3f3;
-    --green: #3e8e41;
+  --font: "Chakra Petch";
+  --yellow: #ffe207;
+  --blue: #003f82;
+  --black: #1b1b1b;
+  --red: #a20000;
+  --white: #f3f3f3;
+  --green: #3e8e41;
 }
 
 /* Default Styles */
 body {
-    background-image: url("../assets/bg_start.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+  background-image: url("../assets/bg_start.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 .bodyOverlay {
-    background-color: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
 #gamecontainer {
-    grid-row-start: 1;
-    grid-row-end: 3;
-    display: grid;
-    justify-items: center;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    height: 100vh;
-    background-image: url(/background_space_2.jpg);
-    background-size: 100% 100%;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: grid;
+  justify-items: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  height: 100vh;
+  background-image: url(/background_space_2.jpg);
+  background-size: 100% 100%;
 }
 
 h1 {
-    font-size: 4rem;
+  font-size: 4rem;
+}
+
+.background > p {
+  font-size: 1.5rem;
 }
 
 .useroption {
-    width: 20vw;
-    padding: 20px 50px;
-    background-color: var(--yellow);
-    border: 1px solid var(--yellow);
-    color: var(--black);
-    margin-bottom: 20px;
-    text-align: center;
-    transition: 125ms;
-    font-weight: 600;
-    font-family: var(--font);
-    font-size: 1.2rem;
+  width: 20vw;
+  padding: 20px 50px;
+  background-color: var(--yellow);
+  border: 1px solid var(--yellow);
+  color: var(--black);
+  margin-bottom: 20px;
+  text-align: center;
+  transition: 125ms;
+  font-weight: 600;
+  font-family: var(--font);
+  font-size: 1.2rem;
 }
 
 .useroption:hover {
-    background-color: var(--black);
-    border: 1px solid var(--yellow);
-    color: var(--yellow);
-    cursor: pointer;
+  background-color: var(--black);
+  border: 1px solid var(--yellow);
+  color: var(--yellow);
+  cursor: pointer;
 }
 
 .selections,
 .selections div {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    height: 100vh;
-    background-color: var(--black);
-    background-color: #121212;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  height: 100vh;
+  background-color: var(--black);
+  background-color: #121212;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }

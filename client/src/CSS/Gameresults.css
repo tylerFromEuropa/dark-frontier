@@ -1,14 +1,22 @@
 #gameovercontent,
-#gamevictorycontent {
-    position: absolute;
-    top: 50%;
-    left: 40%;
+#gamevictory,
+#cardvictory,
+#rpsvictory,
+#gamefriendly {
+    /* position: absolute; */
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 25%;
+    /* left: 40%; */
     font-weight: bolder;
     color: var(--yellow);
 }
 
 #gameovercontent button,
-#gamevictorycontent button {
+#gamevictory button,
+#cardvictory button,
+#rpsvictory button,
+#gamefriendly button {
     cursor: pointer;
     background-color: var(--yellow);
     border: none;
@@ -23,7 +31,10 @@
 }
 
 #gameovercontent button:hover,
-#gamevictorycontent button:hover {
+#gamevictory button:hover,
+#rpsvictory button:hover,
+#gamevictory button:hover,
+#gamefriendly button:hover {
     background-color: var(--black);
     border: 1px solid var(--yellow);
     color: var(--yellow);

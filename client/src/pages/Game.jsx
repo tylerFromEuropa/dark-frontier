@@ -70,7 +70,7 @@ export default function Game() {
           />
         )}
 
-        {currentStep === 15 && (
+        {currentStep === 1 && (
           <$1_Backstory
             currentStep={currentStep}
             setCurrentStep={setCurrentStep}
@@ -142,7 +142,7 @@ export default function Game() {
             setMyUser={setMyUser}
           />
         )}
-        {currentStep === 1 && (
+        {currentStep === 15 && (
           <BossOne
             myCharacter={myCharacter}
             setCurrentStep={setCurrentStep}

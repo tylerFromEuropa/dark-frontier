@@ -3,8 +3,9 @@
     "Backstory": [
       {
         "story": [
-          "After your ship was robbed by pirates, you crash landed on the strange planet Nuccunus! When you wake up, you are very thirsty...",
-          "Look around the lifepod ship for some water"
+          "After your ship was robbed by pirates...",
+          "...you crash landed on the strange planet Nuccunus! When you wake up, you are very thirsty...",
+          "Look around your spaceship for some water"
         ],
         "waterPathTrue": [
           "You find your trusty water flask, you remove the cap and drink like never before, you quench your thirst.",
@@ -19,43 +20,47 @@
           "After a long trek through the harsh landscape of this region on Nuccunus...",
           "You approach the village gates, two Nuccunulan guards stand on either side of the door. The guard on the left stops you as you get closer and yells in a language unknown to you...",
           "You begin to feel dizzy and the world spins around you...You collapse on the ground like a sack of potatoes...",
-          "You wake up at the local clinic with an handsome doctor sporting a sexy mustache grinning at you.",
+          "You wake up at the local clinic with an handsome doctor sporting a sexy mustache grinning at you. Is this the real life? Is this just fantasy?",
           "Carefully choose your option!"
         ],
         "guardExplain": [
-          "The guards somehow understood what you meant, and perhaps they heard a boom in the distance... They let you in! On the way in they do drinking motions with their 3rd hands."
+          "The guards somehow understood what you meant. But before they let you in, they challenge you to a game of Meteor, Spacekarate Chop, Laserscissors!"
         ],
         "guardFingerGuns": [
-          "They see you mimic a criminal and a victim, despite your awful acting attempts, they understand you. They let you in. On the way in they do drinking motions with their 3rd hand."
+          "Despite your awful acting attempts, they understand you. But before they let you in, they challenge you to a game of Meteor, Spacekarate Chop, Laserscissors!"
         ],
         "guardYell": [
-          "They are confused by what you are saying, as they do not speak your tongue. One of the guards take some coins out of his pocket and points to the door. He is saying you need to pay for entry. You lose some coins"
+          "They are confused by what you are saying, but you understand that entry comes with a price. You lose some coins! Before they let you in, they challenge you to a game of Meteor, Spacekarate Chop, Laserscissors!"
         ],
         "doctorQuestion": [
-          "The doctor begins to explain in a tongue you understand that you collapsed of dehydration. He knows about your spaceship crashing and about some pirates that recently came by. He tells you to head to the local bar and ask for “Skyhawk”."
+          "The doctor begins to explain in plain Space English that you collapsed of dehydration. He knows about your spaceship crashing and about some pirates that recently came by. He tells you to head to the local bar..."
         ],
         "doctorPanic": [
-          "As you rip off the cables and devices that were attached to various of your orifices, the doctor begins to explain in a tongue you understand that you collapsed of dehydration. He knows about your spaceship crashing and about some pirates that recently came by. He tells you to head to the local bar and ask for “Skyhawk”."
+          "As you rip off the cables and devices that were attached to most of your 17 orifices, the doctor begins to explain in plain Space English that you collapsed of dehydration. He knows about your spaceship crashing and about some pirates that recently came by. He tells you to head to the local bar..."
         ]
       }
     ],
     "Bar": [
       {
         "hub": [
-          "You arrive at the bar, populated with all sorts of creatures and aliens. Some drinking, some fighting... You make your way to the bartender.",
+          "You arrive at the bar, populated with all sorts of creatures and even some aliens. Some are drinking, some are fighting... You make your way to the bartender.",
           "Make Your Choice!"
         ],
-        "orderDrink": ["The bartender brings you the drink that you requested. They ask what business brings you to this place?"],
-        "askPirates": [
-          "The bartender squints their eyes and looks taken aback. “There are no pirates around... Unless... See that guy over there?” - The bartender points to an individual. “Skyhawk”. The bartender looks at you after. “She may know more about it.”"
+        "orderDrink": [
+          "The bartender brings your AstroFizz. They ask what business brings you to this place?"
         ],
-        "bartenderNumber": ["The bartender grunts and changes demeanor from friendly to irate. You should not have asked that..."]
+        "askPirates": [
+          "The bartender squints their eyes - “There are no pirates around... Unless... See that gal over there?” - The bartender points to an individual. “SKYHAWK. She may know more about it.”"
+        ],
+        "bartenderNumber": [
+          "You find it hard to read the bartender's facial expression. Are they smiling? You decide that yes, they are smiling. Didn't give you their number though..."
+        ]
       }
     ],
     "Skyhawk": [
       {
         "story": [
-          "You approach Skyhawk, a humanoid mercenary who ended up on Nuccunus a long time ago. She's the type to know everything about everyone's business... Funny how that works, eh? She spares you a glance as you get closer. You feel a bit terrified by the glance.",
+          "You approach Skyhawk, a humanoid mercenary who ended up on Nuccunus a long time ago. She's the type to know everything about everyone's business... Funny how that works, eh? She spares you a glance as you get closer.",
           "Carefully choose your option!"
         ],
         "introduced": [
@@ -64,40 +69,48 @@
         "demanded": [
           "Skyhawk grunts in your direction and tells you that nothing is free in this world. She tells you to dial it back and that information costs you. You lose 8 coins!"
         ],
-        "joked": ["That was a good joke, now... What do you want?"]
+        "joked": [
+          "'How do aliens organize a party? They planet!' That was a good joke, you think. Skyhawk stares at you, then asks 'What do you want?'"
+        ]
       }
     ],
     "PlaceVisit": [
       {
         "story": [
-          "You receive information that the parts were stolen by a pirate captain named Celestial Scourge and his grunts. Scourge was last seen in this very bar boasting about a ship he hit, but he’s nowhere to be seen! Chatter around the bar suggests that he may have gone to the local pawn shop, or perhaps to a nearby village where pirates are welcomed."
+          "You receive information that the parts were stolen by a pirate captain named Celestial Scourge and his grunts. Scourge was last seen in this very bar, but he’s nowhere to be seen! Chatter around the bar suggests that he may have gone to the local PAWN SHOP, or perhaps to a NEARBY VILLAGE."
         ]
       }
     ],
     "PawnShop": [
       {
         "story": [
-          "You arrive at the pawn shop and make your way to the counter to talk to the clerk. While engaged in conversation you spot your steering wheel on one of the shelves! You know it's yours cause it has the same bright red paint with scratches on the left side.",
-          "You ask the clerk about it and inform him that is in fact yours but it is stolen... The clerk lazily glances at the steering wheel behind him then back at you. He informs you that this is now his property and if you want it, you have to buy it.",
+          "You arrive at the pawn shop and talk to the clerk. While engaged in conversation, you spot your steering wheel on one of the shelves!",
+          "You ask the clerk about it and inform him that is in fact yours but it was stolen... The clerk lazily glances at the steering wheel behind him then back at you, then says 'This is now my property and if you want it, you have to buy it.'",
           "Choose Carefully"
         ],
         "buyWheel": [
-          "You've got your steering wheel back, whoop whoop! You suspect that it might help with steering your spaceship away from this darn planet."
+          "You've got your steering wheel back, whoop whoop! You suspect that it might help with steering your spaceship."
         ]
       }
     ],
     "Dunecrest": [
       {
         "story": [
-          "You arrive at Dunecrest, it appears to be a rundown village with dilapidating buildings and an overall bad vibe.",
-          "You make your way to the local (and only) bar where you encounter a bunch of individuals, all from bad walks of life, murderers, thieves, pirates... You name it.",
-          "You eventually make your way around the bar and find Captain Celestial Scourge, and you finally get a chance to confront him.",
+          "You arrive at Dunecrest, a rundown village with dilapidated buildings and an overall bad vibe.",
+          "You make your way to the local (and only) bar. First impression: It smells funny and it's very hot, and that's just the alien on the left. You encounter a bunch of individuals, all from bad walks of life, murderers, thieves, pirates... You name it.",
+          "You eventually make your way around the bar and find Captain CELESTIAL SCOURGE, and you finally get a chance to confront him.",
           "You have my wormhole garbler and Gravimetric Giggletron! Give them back to me, now!",
           "Hahaha, you pathetic creature. It was so easy to take this from you! What makes you think I will give it back?",
           "Choose Carefully"
         ],
-        "spareLife": ["Give it back and I will spare your life!", "NEVER! FIGHT ME!"],
-        "attack": ["You messed with the wrong dude, Pirate! Prepare to die!", "BRING IT!"],
+        "spareLife": [
+          "Give it back and I will spare your life!",
+          "NEVER! FIGHT ME!"
+        ],
+        "attack": [
+          "You messed with the wrong dude, Pirate! Prepare to die!",
+          "BRING IT!"
+        ],
         "blasting": ["WHAT THE..."]
       }
     ],

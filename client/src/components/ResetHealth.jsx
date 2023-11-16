@@ -15,7 +15,7 @@ export default function ResetHealth({ myUser, setMyUser, setCurrentStep }) {
     } catch (error) {
       console.error("Error updating user:", error);
     }
-    setCurrentStep(7);
+    setCurrentStep(0);
   }
 
   return (
@@ -27,7 +27,7 @@ export default function ResetHealth({ myUser, setMyUser, setCurrentStep }) {
             resetHealth();
           }}
         >
-          Go back to ship
+          Start again
         </button>
       </div>
     </>

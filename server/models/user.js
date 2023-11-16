@@ -6,6 +6,7 @@ const userSchema = new Schema({
   myID: Number,
   userID: String,
   character: Object,
+  QQ: Number,
 });
 
 const User = mongoose.model("User", userSchema);

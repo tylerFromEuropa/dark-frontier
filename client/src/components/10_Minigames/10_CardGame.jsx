@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./10_CardGame.css";
 
-export default function $10_CardGame({ setCurrentStep }) {
+export default function $10_CardGame({ setCurrentStep, setMyUser, myUser }) {
   const [cardDeck, setCardDeck] = useState();
 
   const [dealerCard, setdealerCard] = useState();
@@ -54,15 +54,19 @@ export default function $10_CardGame({ setCurrentStep }) {
   function checkResult() {
     if (dealerCard.cards[0].value > userCard.cards[0].value && userGuess === "higher") {
       setResult("lose");
+      setMyUser({ ...myUser, QQ: myUser.QQ - 15 });
       setCurrentStep(3);
     } else if (dealerCard.cards[0].value > userCard.cards[0].value && userGuess === "lower") {
       setResult("win");
+      setMyUser({ ...myUser, QQ: myUser.QQ + 50 });
       setCurrentStep(96);
     } else if (dealerCard.cards[0].value < userCard.cards[0].value && userGuess === "lower") {
       setResult("lose");
+      setMyUser({ ...myUser, QQ: myUser.QQ - 15 });
       setCurrentStep(3);
     } else if (dealerCard.cards[0].value < userCard.cards[0].value && userGuess === "higher") {
       setResult("win");
+      setMyUser({ ...myUser, QQ: myUser.QQ + 50 });
       setCurrentStep(96);
     } else {
       setResult("tie");

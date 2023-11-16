@@ -2,19 +2,12 @@ import { useEffect, useState } from "react";
 import "./5_PawnShop.css";
 import storyline from "./PawnShopStoryLine.json";
 
-export default function $5_PawnShop({
-  setCurrentStep,
-  currentStep,
-  myUser,
-  setMyUser,
-}) {
+export default function $5_PawnShop({ setCurrentStep, currentStep, myUser, setMyUser }) {
   const [storyChoice, setStoryChoice] = useState(0);
   const [specificChoice, setSpecificChoice] = useState(0);
   const [optionCheck, setOptionCheck] = useState(false);
   const [storyPath, setStoryPath] = useState("story");
-  const [backgroundImageClass, setBackgroundImageClass] = useState(
-    "background background_pawnshop"
-  );
+  const [backgroundImageClass, setBackgroundImageClass] = useState("background background_pawnshop");
 
   const [pathArray, setPathArray] = useState({
     buyWheel: false,

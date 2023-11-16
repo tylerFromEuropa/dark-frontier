@@ -6,26 +6,46 @@
   background-color: #272727de;
   color: var(--yellow);
   height: 100vh;
+  background-image: url(../components/6_Dunecrest/background_townbar.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
 }
 #leftimage,
 #rightimage {
-  max-width: 60%;
+  width: 60%;
 }
 
 .playerhighlight {
   border: 10px solid var(--yellow);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  background-color: var(--yellow);
+}
+
+#leftside,
+#middleright {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 #middleleft {
   overflow: hidden;
   height: 100%;
   position: relative;
+  background-color: #121212c0;
 }
 
 #middletextcontainer {
   height: 80%;
   position: absolute;
   bottom: 0px;
+  text-align: center;
+  width: 100%;
 }
 
 #rightside {
@@ -40,4 +60,17 @@
 
 .fightactiondescription {
   margin-bottom: 20px;
+}
+
+.fightplayername {
+  font-size: 150%;
+  font-weight: bold;
+  color: var(--yellow);
+  width: 60%;
+  background-color: #121212;
+  padding: 10px 5px;
+  border: 5px solid var(--yellow);
+
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
 }

@@ -70,125 +70,21 @@ export default function Game() {
           />
         )}
 
-        {currentStep === 1 && (
-          <$1_Backstory
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 2 && (
-          <$2_Bar
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 3 && (
-          <$3_Skyhawk
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 4 && (
-          <$4_PlaceVisit
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 5 && (
-          <$5_PawnShop
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 6 && (
-          <$6_Dunecrest
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 7 && (
-          <$7_Spaceship
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 10 && (
-          <$10_RPS
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 11 && (
-          <$10_Cardgame
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 15 && (
-          <BossOne
-            myCharacter={myCharacter}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 96 && (
-          <CardVictory
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 97 && (
-          <RPSVictory
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 98 && (
-          <GameFriendly
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 99 && (
-          <GameVictory
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
-        {currentStep === 100 && (
-          <GameOver
-            setCurrentStep={setCurrentStep}
-            myUser={myUser}
-            setMyUser={setMyUser}
-          />
-        )}
+        {currentStep === 1 && <$1_Backstory currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 2 && <$2_Bar currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 3 && <$3_Skyhawk currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 4 && <$4_PlaceVisit currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 5 && <$5_PawnShop currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 6 && <$6_Dunecrest currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 7 && <$7_Spaceship currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 10 && <$10_RPS currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 11 && <$10_Cardgame currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 15 && <BossOne myCharacter={myCharacter} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 96 && <CardVictory currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 97 && <RPSVictory currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 98 && <GameFriendly currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 99 && <GameVictory currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+        {currentStep === 100 && <GameOver setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
       </div>
     </>
   );

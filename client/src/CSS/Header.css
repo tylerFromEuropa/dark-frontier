@@ -24,7 +24,7 @@
     justify-content: center;
   }
 }
-#headerchararacter p,
+#headerName,
 .health-bar {
   font-size: 2rem;
   font-weight: bolder;
@@ -68,4 +68,11 @@
   background-color: var(--red);
   height: 20px;
   width: 20px;
+}
+
+.qqText {
+  font-size: 16px;
+  font-weight: bolder;
+  color: var(--yellow);
+  padding: 0 0 0 1rem;
 }

@@ -26,6 +26,14 @@
   background-image: url(background_bartender.webp);
 }
 
+.background_bartenderangry {
+  background-image: url(background_bartenderangry.webp);
+}
+
+.background_bartenderdrink {
+  background-image: url(background_bartenderdrink.webp);
+}
+
 .background > p {
   background-color: #000000b6;
   padding: 20px 20px;

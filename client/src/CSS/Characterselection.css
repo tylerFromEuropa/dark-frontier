@@ -75,3 +75,12 @@
     width: 20vw;
     max-width: 33vh;
 }
+
+#select-adv-text {
+    font-size: 2rem;
+    color: var(--yellow);
+    background-color: var(--black);
+    border: 1px solid var(--yellow);
+    padding: 30px;
+    margin: 50px;
+}

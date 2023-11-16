@@ -1,17 +1,14 @@
-import "../CSS/Gameresults.css";
+import "../../../CSS/Gameresults.css";
 
 export default function CardVictory({ myUser, setMyUser, setCurrentStep }) {
   return (
     <>
       <div className="bodyOverlay">
         <div id="cardvictory">
-          <h1 id="cardvictorytext">
-            You won! You spent so much time in space playing card games that you became a natural at
-            them.
-          </h1>
+          <h1 id="cardvictorytext">You Lost! Go back to drinking.</h1>
           <button
             onClick={() => {
-              setCurrentStep(4);
+              setCurrentStep(3);
               setMyUser({
                 ...myUser,
                 character: {

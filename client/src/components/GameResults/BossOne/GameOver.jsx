@@ -1,5 +1,5 @@
-import ResetHealth from "./ResetHealth";
-import "../CSS/Gameresults.css";
+import ResetHealth from "../../ResetHealth";
+import "../../../CSS/Gameresults.css";
 
 export default function GameOver({ myUser, setMyUser, setCurrentStep }) {
   return (

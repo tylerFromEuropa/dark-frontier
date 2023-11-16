@@ -190,7 +190,8 @@ export default function BossOne({ myCharacter, myUser, setMyUser, currentStep, s
             </div>
 
             {myUser.character.health < 1 && setCurrentStep(100)}
-            {bossOne.health < 1 && setCurrentStep(5)}
+            {bossOne.health < 1 && setCurrentStep(99)}
+            {bossOne.friendly > 10 && setCurrentStep(98)}
         </div>
     );
 }

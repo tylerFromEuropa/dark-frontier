@@ -16,6 +16,7 @@ import $15_BossOne from "../components/BossFights/BossOne";
 import { useAuth0 } from "@auth0/auth0-react";
 import GameOver from "../components/GameOver";
 import GameVictory from "../components/GameVictory";
+import GameFriendly from "../components/GameFriendly";
 
 export default function Game() {
     const [currentStep, setCurrentStep] = useState(0);
@@ -77,9 +78,11 @@ export default function Game() {
                 {currentStep === 6 && <$6_Dunecrest currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
                 {currentStep === 7 && <$7_Spaceship currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
                 {currentStep === 10 && <$10_RPS currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
+                {currentStep === 11 && <$10_CardGame currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
                 {currentStep === 15 && (
                     <$15_BossOne myUser={myUser} setMyUser={setMyUser} myCharacter={myCharacter} setCurrentStep={setCurrentStep} currentStep={currentStep} />
                 )}
+                {currentStep === 98 && <GameFriendly currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
                 {currentStep === 99 && <GameVictory currentStep={currentStep} setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
                 {currentStep === 100 && <GameOver setCurrentStep={setCurrentStep} myUser={myUser} setMyUser={setMyUser} />}
             </div>

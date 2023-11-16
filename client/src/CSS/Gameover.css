@@ -1,5 +1,6 @@
 #gameovercontent,
-#gamevictorycontent {
+#gamevictorycontent,
+#gamefriendly {
     position: absolute;
     top: 50%;
     left: 40%;
@@ -8,7 +9,8 @@
 }
 
 #gameovercontent button,
-#gamevictorycontent button {
+#gamevictorycontent button,
+#gamefriendlytext {
     cursor: pointer;
     background-color: var(--yellow);
     border: none;
@@ -23,7 +25,8 @@
 }
 
 #gameovercontent button:hover,
-#gamevictorycontent button:hover {
+#gamevictorycontent button:hover,
+#gamefriendlytext button:hover {
     background-color: var(--black);
     border: 1px solid var(--yellow);
     color: var(--yellow);

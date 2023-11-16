@@ -41,12 +41,12 @@ export default function $10_RPS({ setCurrentStep, myUser }) {
         <div className="rps-container">
             <div className="character-info-container">
                 <div className="character-info">
-                    <h1>{myUser.character.name}</h1>
+                    <h2 class="rps-char-title">{myUser.character.name}</h2>
                     <img className="character-image" src={myUser.character.img} alt="" />
                 </div>
                 <div className="character-choice">
-                    <h3>Your Choice:</h3>
-                    <h4 className="userChoice">{userChoice}</h4>
+                    <h3 className="rps-choice-text">Your Choice:</h3>
+                    <p className="userChoice">{userChoice}</p>
                 </div>
             </div>
             <div>
@@ -61,12 +61,15 @@ export default function $10_RPS({ setCurrentStep, myUser }) {
                 </button>
                 <h2 className="result">{result}</h2>
             </div>
-            <div>
-                <h1>Guards</h1>
-                <img className="guards-image" src={guardsBG} alt="" />
-
-                <h3>Computer's choice:</h3>
-                <h4 className="userChoice">{computerChoice}</h4>
+            <div className="guard-info-container">
+                <div className="guard-info">
+                    <h2 class="rps-char-title">Guards</h2>
+                    <img className="guards-image" src={guardsBG} alt="" />
+                </div>
+                <div className="npc-choice">
+                    <h3 className="rps-choice-text">Computer's choice:</h3>
+                    <p className="userChoice">{computerChoice}</p>
+                </div>
             </div>
         </div>
     );

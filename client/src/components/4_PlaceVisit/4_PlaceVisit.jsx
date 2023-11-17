@@ -49,7 +49,30 @@ export default function $4_PlaceVisit({
   return (
     <section className="placeVisit-page">
       <section className={backgroundImageClass}>
-        <img src="" alt="" />
+        <div
+          id="dunecrestbox"
+          onClick={() => {
+            everyPath(2);
+          }}
+        >
+          to Dunecrest
+        </div>
+        <div
+          id="pawnshopbox"
+          onClick={() => {
+            everyPath(1);
+          }}
+        >
+          to Pawnshop
+        </div>{" "}
+        <div
+          id="backtoshipbox"
+          onClick={() => {
+            everyPath(3);
+          }}
+        >
+          Back to your ship
+        </div>
         <p id="placevisittext">
           {storyline[0].PlaceVisit[0][storyPath][storyChoice]}
         </p>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./5_PawnShop.css";
-import storyline from "../Storyline/Storyline.json";
+import storyline from "../../JSON/Storyline.json";
 
 export default function $5_PawnShop({ setCurrentStep, currentStep, myUser, setMyUser }) {
   const [storyChoice, setStoryChoice] = useState(0);

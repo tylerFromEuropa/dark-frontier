@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./1_Backstory.css";
-import storyline from "../Storyline/Storyline.json";
+import storyline from "../../JSON/Storyline.json";
 
 export default function $1_Backstory({ myUser, setMyUser, setCurrentStep, currentStep }) {
   const [storyChoice, setStoryChoice] = useState(0);

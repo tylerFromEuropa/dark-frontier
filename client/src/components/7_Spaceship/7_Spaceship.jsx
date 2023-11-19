@@ -1,20 +1,13 @@
 import { useEffect, useState } from "react";
 import "./7_Spaceship.css";
-import storyline from "../Storyline/Storyline.json";
+import storyline from "../../JSON/Storyline.json";
 
-export default function $7_Spaceship({
-  setCurrentStep,
-  currentStep,
-  myUser,
-  setMyUser,
-}) {
+export default function $7_Spaceship({ setCurrentStep, currentStep, myUser, setMyUser }) {
   const [storyChoice, setStoryChoice] = useState(0);
   const [specificChoice, setSpecificChoice] = useState(0);
   const [optionCheck, setOptionCheck] = useState(false);
   const [storyPath, setStoryPath] = useState("story");
-  const [backgroundImageClass, setBackgroundImageClass] = useState(
-    "background background_ship"
-  );
+  const [backgroundImageClass, setBackgroundImageClass] = useState("background background_ship");
 
   const [pathArray, setPathArray] = useState({
     spareLife: false,

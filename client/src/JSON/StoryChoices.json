@@ -1,0 +1,12 @@
+[
+  {
+    "Backstory": {
+      "gotWater": false,
+      "guardExplain": false,
+      "guardFingerGuns": false,
+      "guardYell": false,
+      "doctorQuestion": false,
+      "doctorPanic": false
+    }
+  }
+]
